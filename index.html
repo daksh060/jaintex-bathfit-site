@@ -449,9 +449,36 @@
           </div>
           <div>
             <h3 class="font-semibold text-lg" data-i18n="address">Address</h3>
-            <p><a class="text-chrome hover:text-white underline underline-offset-4" href="https://www.google.com/maps/search/?api=1&amp;query=Devli%2C%20Sangam%20Vihar%2C%20New%20Delhi%20110080" target="_blank" rel="noopener noreferrer">Devli, Sangam Vihar, New Delhi - 110080</a></p>
-            <p class="text-chrome text-sm">(Opposite Tinu Public School)</p>
+            <p><a class="text-chrome hover:text-white underline underline-offset-4" href="https://www.google.com/maps/search/?api=1&amp;query=Devli%2C%20Sangam%20Vihar%2C%20New%20Delhi%20110080" target="_blank" rel="noopener noreferrer" data-i18n="addressText">Devli, Sangam Vihar, New Delhi - 110080</a></p>
+            <p class="text-chrome text-sm" data-i18n="landmarkText">(Opposite Tinu Public School)</p>
           </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://www.justdial.com/Delhi/Jaintex-Bathfit-Near-Tinu-Public-School-Sangam-Vihar/011P5407014_BZDET"
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/40 px-4 font-semibold text-white transition hover:bg-white/10">
+            <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+            <span data-i18n="justdial">View us on Justdial</span>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Devli%2C%20Sangam%20Vihar%2C%20New%20Delhi%20110080"
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/40 px-4 font-semibold text-white transition hover:bg-white/10">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+            <span data-i18n="directions">Get directions</span>
+          </a>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl border border-white/15 bg-white/5">
+          <iframe
+            title="Map showing Jaintex Bathfit in Devli, Sangam Vihar, New Delhi"
+            data-i18n-title="mapTitle"
+            src="https://maps.google.com/maps?q=Devli%2C%20Sangam%20Vihar%2C%20New%20Delhi%20110080&amp;z=15&amp;output=embed"
+            class="h-64 w-full border-0 sm:h-72"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
         </div>
 
         <!-- WhatsApp quick link -->
@@ -598,6 +625,10 @@
       faqMore: "Have another question?", contactUs: "Contact Jaintex Bathfit",
       contactTitle: "Visit or Contact Us",
       contactIntro: "Visit the showroom, call us, or send a message on WhatsApp to ask about products.",
+      justdial: "View us on Justdial", directions: "Get directions",
+      mapTitle: "Map showing Jaintex Bathfit in Devli, Sangam Vihar, New Delhi",
+      addressText: "Devli, Sangam Vihar, New Delhi - 110080",
+      landmarkText: "(Opposite Tinu Public School)",
       owner: "Owner", phone: "Phone", address: "Address", quickChat: "Message us on WhatsApp",
       fullName: "Your name", phoneWhatsApp: "Phone / WhatsApp", productCategory: "Product category",
       chooseCategory: "Choose a category", otherCategory: "Other / Multiple categories",
@@ -657,6 +688,10 @@
       faqMore: "कोई और सवाल है?", contactUs: "जैनटेक्स बाथफिट से संपर्क करें",
       contactTitle: "मिलें या संपर्क करें",
       contactIntro: "शोरूम आएं, कॉल करें या उत्पादों के बारे में पूछने के लिए WhatsApp संदेश भेजें।",
+      justdial: "Justdial पर हमारा पेज देखें", directions: "रास्ता देखें",
+      mapTitle: "देवली, संगम विहार, नई दिल्ली में जैनटेक्स बाथफिट का नक्शा",
+      addressText: "देवली, संगम विहार, नई दिल्ली - 110080",
+      landmarkText: "(टीनू पब्लिक स्कूल के सामने)",
       owner: "मालिक", phone: "फ़ोन", address: "पता", quickChat: "WhatsApp पर संदेश भेजें",
       fullName: "आपका नाम", phoneWhatsApp: "फ़ोन / WhatsApp", productCategory: "उत्पाद श्रेणी",
       chooseCategory: "श्रेणी चुनें", otherCategory: "अन्य / कई श्रेणियां",
@@ -696,6 +731,9 @@
     document.querySelectorAll('[data-i18n-alt]').forEach(element => {
       element.alt = words[element.dataset.i18nAlt];
     });
+    document.querySelectorAll('[data-i18n-title]').forEach(element => {
+      element.title = words[element.dataset.i18nTitle];
+    });
     languageSelect.value = locale;
     document.getElementById('shareStatus').textContent = '';
   };
@@ -704,7 +742,10 @@
     filterCategories();
     try { localStorage.setItem('jaintex-language', languageSelect.value); } catch {}
   });
-  let initialLanguage = 'en';
+  const deviceLanguage = navigator.language
+    || navigator.languages?.[0]
+    || 'en';
+  let initialLanguage = /^hi(?:-|$)/i.test(deviceLanguage) ? 'hi' : 'en';
   try {
     const savedLanguage = localStorage.getItem('jaintex-language');
     if (savedLanguage === 'hi' || savedLanguage === 'en') initialLanguage = savedLanguage;
