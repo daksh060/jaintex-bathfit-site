@@ -6,6 +6,14 @@
 <title>Jaintex Bathfit – Premium Bath Fittings & Commercial Hardware</title>
 <meta name="description" content="Jaintex Bathfit supplies premium bath fittings, water-storage tanks and architectural hardware. Contact us for wholesale and project inquiries in New Delhi.">
 <meta name="theme-color" content="#0B1D3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jaintex Bathfit | Bath Fittings & Hardware">
+<meta property="og:description" content="Explore bath fittings, water-storage tanks, architectural hardware and kitchen utilities. Contact us for a bulk quote.">
+<meta property="og:url" content="https://daksh060.github.io/jaintex-bathfit-site/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://daksh060.github.io/jaintex-bathfit-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -36,6 +44,11 @@
 <style>
   html { scroll-padding-top: 5rem; }
   body { overflow-x:hidden; }
+  .jb-mark { display:inline-flex; align-items:center; justify-content:center; flex:none; width:2.75rem; height:2.75rem; border:1px solid #D4D9DD; border-radius:.75rem; background:linear-gradient(145deg,#132d52,#0B1D3A); box-shadow:0 5px 16px rgb(11 29 58 / 18%); }
+  .jb-mark svg { width:2.15rem; height:2.15rem; }
+  .category-card[hidden] { display:none !important; }
+  .filter-chip[aria-pressed="true"] { background:#0B1D3A; color:#fff; border-color:#0B1D3A; }
+  #shareStatus { min-height:1.5rem; }
   html.js .section { opacity:0; transform:translateY(20px); transition:opacity .6s ease-out, transform .6s ease-out; }
   html.js .section.visible { opacity:1; transform:translateY(0); }
   :focus-visible { outline:3px solid #7B8CA3; outline-offset:3px; }
@@ -57,6 +70,8 @@
     footer .footer-content { align-items:stretch; }
     footer nav { flex-wrap:wrap; justify-content:center; gap:0.5rem 1rem; }
     #backToTop { bottom:calc(1rem + env(safe-area-inset-bottom)); right:1rem; }
+    #backToTop { bottom:calc(5.5rem + env(safe-area-inset-bottom)); }
+    body { padding-bottom:calc(4.5rem + env(safe-area-inset-bottom)); }
   }
   @media (max-width: 380px) {
     #brands, #categories, #faq, #contact { padding-top:3.5rem; padding-bottom:3.5rem; }
@@ -71,6 +86,22 @@
 </style>
 </head>
 <body class="bg-light text-navy antialiased">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Jaintex Bathfit",
+  "url": "https://daksh060.github.io/jaintex-bathfit-site/",
+  "telephone": "+91-98681-39951",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Devli, Sangam Vihar",
+    "addressLocality": "New Delhi",
+    "postalCode": "110080",
+    "addressCountry": "IN"
+  }
+}
+</script>
 
 <!-- ============================================================
      NAVIGATION
@@ -79,9 +110,15 @@
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16">
       <!-- Brand -->
-      <a href="#home" class="flex items-center space-x-2 text-navy font-bold text-xl" aria-label="Jaintex Bathfit Home">
-        <i class="fa-solid fa-water text-chrome text-2xl"></i>
-        <span>Jaintex Bathfit</span>
+      <a href="#home" class="flex items-center gap-3 text-navy font-bold" aria-label="Jaintex Bathfit home">
+        <span class="jb-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" focusable="false">
+            <path d="M28 11v26c0 8-4 13-12 13-5 0-9-2-12-6l6-6c2 2 3 3 6 3 3 0 5-2 5-5V11h7Z" fill="#fff"/>
+            <path d="M34 11h12c10 0 15 5 15 12 0 5-2 8-6 10 5 2 8 6 8 12 0 9-6 14-17 14H34V11Zm9 8v11h4c4 0 6-2 6-6s-2-5-6-5h-4Zm0 19v13h4c5 0 7-2 7-6 0-5-2-7-7-7h-4Z" fill="#D4D9DD"/>
+            <path d="M4 59h56" stroke="#D4D9DD" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+          </svg>
+        </span>
+        <span class="text-lg sm:text-xl leading-tight">Jaintex <span class="font-medium text-slate">Bathfit</span></span>
       </a>
 
       <!-- Desktop links -->
@@ -145,7 +182,11 @@
       <a href="#categories" class="inline-flex min-h-12 items-center px-8 py-4 border border-white/70 text-white font-semibold rounded-full hover:bg-white/10 transition">
         Explore products <i class="fa-solid fa-arrow-down ml-2" aria-hidden="true"></i>
       </a>
+      <button id="shareSite" type="button" class="inline-flex min-h-12 items-center px-6 py-4 border border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition">
+        <i class="fa-solid fa-share-nodes mr-2" aria-hidden="true"></i> Share this website
+      </button>
     </div>
+    <p id="shareStatus" class="mt-3 text-sm text-white/90" aria-live="polite"></p>
   </div>
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
     <i class="fa-solid fa-chevron-down text-white text-3xl"></i>
@@ -204,12 +245,29 @@
       <p class="text-chrome max-w-2xl mx-auto">Explore the core product families we distribute across North India.</p>
     </header>
 
+    <div class="mx-auto mb-8 max-w-3xl">
+      <label for="categorySearch" class="sr-only">Search product categories</label>
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate" aria-hidden="true"></i>
+        <input id="categorySearch" type="search" autocomplete="off" placeholder="Search products, e.g. faucets or tanks"
+               class="w-full min-h-12 rounded-xl border border-white/30 bg-white px-11 py-3 text-base text-navy placeholder-slate focus:outline-none focus:ring-2 focus:ring-chrome">
+      </div>
+      <div class="mt-4 flex flex-wrap justify-center gap-2" role="group" aria-label="Filter product categories">
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="all" aria-pressed="true">All products</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="bath" aria-pressed="false">Bath fittings</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="tanks" aria-pressed="false">Water tanks</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="hardware" aria-pressed="false">Hardware</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+      </div>
+      <p id="categoryResults" class="mt-3 text-center text-sm text-chrome" aria-live="polite">Showing all 4 categories.</p>
+    </div>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Bath Fittings -->
-      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="bath" data-search="bath fittings faucets showers accessories taps sanitaryware">
         <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80"
-             alt="Premium chrome faucets" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+             alt="Chrome bath faucet" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
           <h3 class="text-xl font-semibold mb-1">Bath Fittings</h3>
           <p class="text-chrome text-sm">Faucets, showers &amp; accessories</p>
           <a href="#contact" data-category="Bath Fittings" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Bath Fittings</a>
@@ -217,10 +275,10 @@
       </article>
 
       <!-- Water Storage Tanks -->
-      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="tanks" data-search="water storage tanks overhead loft underground water">
         <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80"
-             alt="Industrial water supply infrastructure" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+             alt="Water storage infrastructure" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
           <h3 class="text-xl font-semibold mb-1">Water Storage Tanks</h3>
           <p class="text-chrome text-sm">Overhead, loft &amp; underground tanks</p>
           <a href="#contact" data-category="Water Storage Tanks" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Water Tanks</a>
@@ -228,10 +286,10 @@
       </article>
 
       <!-- Architectural Hardware -->
-      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="hardware" data-search="architectural hardware handles knobs hinges locks">
         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
-             alt="Premium handles & knobs" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+             alt="Architectural interior details" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
           <h3 class="text-xl font-semibold mb-1">Architectural Hardware</h3>
           <p class="text-chrome text-sm">Handles, knobs, hinges &amp; locks</p>
           <a href="#contact" data-category="Architectural Hardware" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Hardware</a>
@@ -239,10 +297,10 @@
       </article>
 
       <!-- Kitchen Utilities -->
-      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="kitchen" data-search="kitchen utilities sinks taps modular accessories">
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-             alt="Modern modular kitchen fittings" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+             alt="Modern kitchen utilities" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
           <h3 class="text-xl font-semibold mb-1">Kitchen Utilities</h3>
           <p class="text-chrome text-sm">Sinks, taps &amp; modular accessories</p>
           <a href="#contact" data-category="Kitchen Utilities" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Kitchen Products</a>
@@ -385,7 +443,7 @@
       <form id="inquiryForm" method="post" class="bg-white/5 rounded-2xl p-8 space-y-6 backdrop-blur-sm" aria-label="Bulk inquiry form">
         <div>
           <label for="name" class="block text-sm font-medium text-chrome mb-1">Full Name</label>
-          <input type="text" id="name" name="name" required
+          <input type="text" id="name" name="name" autocomplete="name" required
                  class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
                  placeholder="Your name">
         </div>
@@ -394,6 +452,25 @@
           <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required
                  class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
                  placeholder="+91 XXXXXXXXXX">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="productCategory" class="block text-sm font-medium text-chrome mb-1">Product category</label>
+            <select id="productCategory" name="category" class="w-full min-h-12 px-4 py-3 rounded-lg bg-navy border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white">
+              <option value="">Choose a category</option>
+              <option>Bath Fittings</option>
+              <option>Water Storage Tanks</option>
+              <option>Architectural Hardware</option>
+              <option>Kitchen Utilities</option>
+              <option>Other / Multiple categories</option>
+            </select>
+          </div>
+          <div>
+            <label for="quantity" class="block text-sm font-medium text-chrome mb-1">Approx. quantity <span class="font-normal">(optional)</span></label>
+            <input type="text" id="quantity" name="quantity" inputmode="numeric" autocomplete="off"
+                   class="w-full min-h-12 px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
+                   placeholder="e.g. 50 pieces">
+          </div>
         </div>
         <div>
           <label for="requirements" class="block text-sm font-medium text-chrome mb-1">Bulk Requirements (brief)</label>
@@ -438,6 +515,15 @@
   </div>
 </footer>
 
+<nav class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-slate/10 bg-white/95 p-2 pb-[calc(.5rem+env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(11,29,58,.12)] backdrop-blur md:hidden" aria-label="Quick contact">
+  <a href="tel:+919868139951" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-navy/15 px-3 font-semibold text-navy">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i> Call
+  </a>
+  <a href="https://wa.me/919868139951" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-navy px-3 font-semibold text-white">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+  </a>
+</nav>
+
 <a id="backToTop" href="#home" class="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-lg transition hover:bg-slate focus-visible:outline-white" aria-label="Back to top">
   <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
 </a>
@@ -477,8 +563,54 @@
   document.querySelectorAll('[data-category]').forEach(link => {
     link.addEventListener('click', () => {
       const requirements = document.getElementById('requirements');
+      const category = document.getElementById('productCategory');
+      category.value = link.dataset.category;
       requirements.value = `I'm interested in ${link.dataset.category}. Please share product options and a bulk quote.`;
     });
+  });
+
+  const categorySearch = document.getElementById('categorySearch');
+  const categoryCards = [...document.querySelectorAll('[data-category-card]')];
+  let selectedCategory = 'all';
+  const filterCategories = () => {
+    const query = categorySearch.value.trim().toLowerCase();
+    let visibleCount = 0;
+    categoryCards.forEach(card => {
+      const matchesCategory = selectedCategory === 'all' || card.dataset.categoryCard === selectedCategory;
+      const matchesQuery = !query || card.dataset.search.includes(query) || card.textContent.toLowerCase().includes(query);
+      card.hidden = !(matchesCategory && matchesQuery);
+      if (!card.hidden) visibleCount++;
+    });
+    document.getElementById('categoryResults').textContent = visibleCount
+      ? `Showing ${visibleCount} ${visibleCount === 1 ? 'category' : 'categories'}.`
+      : 'No matching categories. Try another search.';
+  };
+  categorySearch?.addEventListener('input', filterCategories);
+  document.querySelectorAll('[data-filter]').forEach(button => {
+    button.addEventListener('click', () => {
+      selectedCategory = button.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(chip => chip.setAttribute('aria-pressed', String(chip === button)));
+      filterCategories();
+    });
+  });
+
+  const shareButton = document.getElementById('shareSite');
+  const shareStatus = document.getElementById('shareStatus');
+  shareButton?.addEventListener('click', async () => {
+    const shareData = { title: document.title, text: 'Explore Jaintex Bathfit products and request a bulk quote.', url: location.href };
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        shareStatus.textContent = 'Thanks for sharing Jaintex Bathfit.';
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareData.url);
+        shareStatus.textContent = 'Website link copied. Share it with your contacts.';
+      } else {
+        shareStatus.textContent = `Copy and share this link: ${shareData.url}`;
+      }
+    } catch (error) {
+      if (error.name !== 'AbortError') shareStatus.textContent = 'Could not share automatically. Copy the website address from your browser.';
+    }
   });
 
   // Open a reviewed, prefilled inquiry in WhatsApp (no server required).
@@ -491,8 +623,10 @@
       '',
       `Name: ${formData.get('name')}`,
       `Phone / WhatsApp: ${formData.get('phone')}`,
+      formData.get('category') ? `Product category: ${formData.get('category')}` : '',
+      formData.get('quantity') ? `Approx. quantity: ${formData.get('quantity')}` : '',
       `Requirements: ${formData.get('requirements')}`
-    ].join('\n');
+    ].filter(Boolean).join('\n');
     const url = `https://wa.me/919868139951?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   });
