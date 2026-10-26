@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Jaintex Bathfit – Premium Bath Fittings & Commercial Hardware</title>
+<meta name="description" content="Jaintex Bathfit supplies premium bath fittings, water-storage tanks and architectural hardware. Contact us for wholesale and project inquiries in New Delhi.">
+<meta name="theme-color" content="#0B1D3A">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Custom colour palette -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:   '#0B1D3A',
+          slate:  '#3A4A5E',
+          chrome: '#D4D9DD',
+          light:  '#F5F7FA',
+        },
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<!-- Inter font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  html { scroll-padding-top: 5rem; }
+  body { overflow-x:hidden; }
+  html.js .section { opacity:0; transform:translateY(20px); transition:opacity .6s ease-out, transform .6s ease-out; }
+  html.js .section.visible { opacity:1; transform:translateY(0); }
+  :focus-visible { outline:3px solid #7B8CA3; outline-offset:3px; }
+  .on-dark :focus-visible { outline-color:#fff; }
+  #home :focus-visible { outline-color:#fff; }
+  @media (max-width: 767px) {
+    html { scroll-padding-top: 4.5rem; }
+    #mobileMenu { max-height:calc(100dvh - 4rem); overflow-y:auto; overscroll-behavior:contain; }
+    #home { min-height:100vh; min-height:100svh; padding-top:5rem; padding-bottom:4rem; }
+    #home h1 { font-size:clamp(2.25rem, 9vw, 3.5rem); line-height:1.08; }
+  }
+  @media (max-width: 639px) {
+    #home .hero-actions { flex-direction:column; align-items:stretch; }
+    #home .hero-actions a { width:100%; max-width:22rem; justify-content:center; margin-left:auto; margin-right:auto; }
+    #brands, #categories, #faq, #contact { padding-top:4rem; padding-bottom:4rem; }
+    #brands header, #categories header, #faq header, #contact header { margin-bottom:2.5rem; }
+    #faq summary { min-height:3rem; }
+    #inquiryForm input, #inquiryForm textarea { font-size:16px; }
+    footer .footer-content { align-items:stretch; }
+    footer nav { flex-wrap:wrap; justify-content:center; gap:0.5rem 1rem; }
+    #backToTop { bottom:calc(1rem + env(safe-area-inset-bottom)); right:1rem; }
+  }
+  @media (max-width: 380px) {
+    #brands, #categories, #faq, #contact { padding-top:3.5rem; padding-bottom:3.5rem; }
+  }
+  @media (hover:none) {
+    .group:hover img { transform:none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; transition-duration:.01ms !important; }
+    html.js .section { opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body class="bg-light text-navy antialiased">
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate/10">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-16">
+      <!-- Brand -->
+      <a href="#home" class="flex items-center space-x-2 text-navy font-bold text-xl" aria-label="Jaintex Bathfit Home">
+        <i class="fa-solid fa-water text-chrome text-2xl"></i>
+        <span>Jaintex Bathfit</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center space-x-8">
+        <li><a href="#home" class="text-slate hover:text-navy transition">Home</a></li>
+        <li><a href="#brands" class="text-slate hover:text-navy transition">Brands</a></li>
+        <li><a href="#categories" class="text-slate hover:text-navy transition">Products</a></li>
+        <li><a href="#faq" class="text-slate hover:text-navy transition">FAQs</a></li>
+        <li><a href="#contact" class="text-slate hover:text-navy transition">Contact</a></li>
+      </ul>
+
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center px-4 py-2 bg-navy text-white rounded-full font-medium hover:bg-slate transition shadow-lg"
+         aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+      </a>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg p-2 text-navy" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <i id="menuIcon" class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <ul id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <li><a href="#home" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Home</a></li>
+      <li><a href="#brands" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Brands</a></li>
+      <li><a href="#categories" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Products</a></li>
+      <li><a href="#faq" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">FAQs</a></li>
+      <li><a href="#contact" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Contact</a></li>
+      <li>
+        <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
+           class="block w-full min-h-12 text-center py-3 bg-navy text-white rounded-full font-medium mt-2">
+          <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+         style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1920&q=80');">
+  <div class="absolute inset-0 bg-navy/70"></div>
+  <div class="relative max-w-5xl mx-auto px-6 text-center text-white">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+      Premium Bath Fittings &amp; Commercial Hardware Solutions
+    </h1>
+    <p class="text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto mb-10">
+      Trusted wholesale partner for durable, high‑grade bath fittings, water‑storage tanks and architectural hardware — delivered on time, every time.
+    </p>
+    <div class="hero-actions flex flex-wrap justify-center gap-3">
+      <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
+         class="inline-flex min-h-12 items-center px-8 py-4 bg-chrome text-navy font-semibold rounded-full shadow-xl hover:bg-white transition">
+        <i class="fa-brands fa-whatsapp mr-2 text-xl" aria-hidden="true"></i> Get a Quote on WhatsApp
+      </a>
+      <a href="#categories" class="inline-flex min-h-12 items-center px-8 py-4 border border-white/70 text-white font-semibold rounded-full hover:bg-white/10 transition">
+        Explore products <i class="fa-solid fa-arrow-down ml-2" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
+    <i class="fa-solid fa-chevron-down text-white text-3xl"></i>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURED BRANDS
+============================================================ -->
+<section id="brands" class="py-20 bg-white section" aria-labelledby="brands-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-16">
+      <h2 id="brands-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2">Trusted Brands We Supply</h2>
+      <p class="text-slate max-w-2xl mx-auto">Authorized traders for India’s most respected bath‑ware, tile and tank manufacturers.</p>
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Jaquar -->
+      <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <i class="fa-solid fa-shower text-4xl text-navy mb-4"></i>
+        <h3 class="text-xl font-semibold text-navy mb-1">Jaquar</h3>
+        <p class="text-slate text-sm">Bath Fittings &amp; Sanitaryware</p>
+      </article>
+
+      <!-- Somany -->
+      <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <i class="fa-solid fa-border-all text-4xl text-navy mb-4"></i>
+        <h3 class="text-xl font-semibold text-navy mb-1">Somany</h3>
+        <p class="text-slate text-sm">Premium Tiles &amp; Bathware</p>
+      </article>
+
+      <!-- Pureplast -->
+      <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <i class="fa-solid fa-droplet text-4xl text-navy mb-4"></i>
+        <h3 class="text-xl font-semibold text-navy mb-1">Pureplast</h3>
+        <p class="text-slate text-sm">High‑Quality Water Storage Tanks</p>
+      </article>
+
+      <!-- Olina -->
+      <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <i class="fa-solid fa-wrench text-4xl text-navy mb-4"></i>
+        <h3 class="text-xl font-semibold text-navy mb-1">Olina</h3>
+        <p class="text-slate text-sm">Durable Water Tanks &amp; Hardware</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT CATEGORIES
+============================================================ -->
+<section id="categories" class="on-dark py-20 bg-navy text-white section" aria-labelledby="cat-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-16">
+      <h2 id="cat-heading" class="text-3xl sm:text-4xl font-bold mb-2">Our Trading Segments</h2>
+      <p class="text-chrome max-w-2xl mx-auto">Explore the core product families we distribute across North India.</p>
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Bath Fittings -->
+      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80"
+             alt="Premium chrome faucets" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Bath Fittings</h3>
+          <p class="text-chrome text-sm">Faucets, showers &amp; accessories</p>
+          <a href="#contact" data-category="Bath Fittings" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Bath Fittings</a>
+        </div>
+      </article>
+
+      <!-- Water Storage Tanks -->
+      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80"
+             alt="Industrial water supply infrastructure" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Water Storage Tanks</h3>
+          <p class="text-chrome text-sm">Overhead, loft &amp; underground tanks</p>
+          <a href="#contact" data-category="Water Storage Tanks" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Water Tanks</a>
+        </div>
+      </article>
+
+      <!-- Architectural Hardware -->
+      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+             alt="Premium handles & knobs" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Architectural Hardware</h3>
+          <p class="text-chrome text-sm">Handles, knobs, hinges &amp; locks</p>
+          <a href="#contact" data-category="Architectural Hardware" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Hardware</a>
+        </div>
+      </article>
+
+      <!-- Kitchen Utilities -->
+      <article class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+             alt="Modern modular kitchen fittings" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-navy/60 flex flex-col items-center justify-center p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Kitchen Utilities</h3>
+          <p class="text-chrome text-sm">Sinks, taps &amp; modular accessories</p>
+          <a href="#contact" data-category="Kitchen Utilities" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Kitchen Products</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KEY VALUE PROPOSITIONS
+============================================================ -->
+<section class="py-20 bg-white section" aria-labelledby="value-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-16">
+      <h2 id="value-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2">Why Choose Jaintex Bathfit?</h2>
+      <p class="text-slate max-w-2xl mx-auto">Three pillars that make us the preferred wholesale partner.</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Bulk Wholesale Pricing -->
+      <article class="bg-light rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+        <div class="w-16 h-16 mx-auto mb-4 bg-navy/10 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-tag text-3xl text-navy"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-navy mb-2">Bulk Wholesale Pricing</h3>
+        <p class="text-slate">Competitive rates on volume orders – maximise your margin without compromising quality.</p>
+      </article>
+
+      <!-- Uncompromised Quality Control -->
+      <article class="bg-light rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+        <div class="w-16 h-16 mx-auto mb-4 bg-navy/10 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-shield-halved text-3xl text-navy"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-navy mb-2">Uncompromised Quality Control</h3>
+        <p class="text-slate">Every lot inspected against ISI/ISO standards before dispatch.</p>
+      </article>
+
+      <!-- Reliable Supply Chain Network -->
+      <article class="bg-light rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+        <div class="w-16 h-16 mx-auto mb-4 bg-navy/10 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-truck-fast text-3xl text-navy"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-navy mb-2">Reliable Supply Chain Network</h3>
+        <p class="text-slate">Pan‑India logistics with on‑time delivery guarantees for project timelines.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FREQUENTLY ASKED QUESTIONS
+============================================================ -->
+<section id="faq" class="py-20 bg-light section" aria-labelledby="faq-heading">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-12">
+      <h2 id="faq-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2">Frequently Asked Questions</h2>
+      <p class="text-slate">Need product availability, pricing or delivery details? Get in touch for current information.</p>
+    </header>
+    <div class="space-y-4">
+      <details class="group rounded-xl bg-white p-6 shadow-sm">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
+          How can I get pricing or a bulk quote?
+          <i class="fa-solid fa-plus text-slate transition group-open:rotate-45" aria-hidden="true"></i>
+        </summary>
+        <p class="mt-4 text-slate">Send the products, brands, quantities and delivery location through the inquiry form or WhatsApp. Jaintex Bathfit can confirm current pricing and availability.</p>
+      </details>
+      <details class="group rounded-xl bg-white p-6 shadow-sm">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
+          Which product categories do you supply?
+          <i class="fa-solid fa-plus text-slate transition group-open:rotate-45" aria-hidden="true"></i>
+        </summary>
+        <p class="mt-4 text-slate">The listed categories include bath fittings, water-storage tanks, architectural hardware and kitchen utilities. Contact the team to confirm specific products and brands.</p>
+      </details>
+      <details class="group rounded-xl bg-white p-6 shadow-sm">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
+          Can you deliver to my location?
+          <i class="fa-solid fa-plus text-slate transition group-open:rotate-45" aria-hidden="true"></i>
+        </summary>
+        <p class="mt-4 text-slate">Share your delivery location and order details so the team can confirm serviceability, delivery options and timelines for your requirement.</p>
+      </details>
+    </div>
+    <p class="mt-8 text-center text-slate">Have another question? <a class="font-semibold text-navy underline underline-offset-4" href="#contact">Contact Jaintex Bathfit</a>.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT / INQUIRY
+============================================================ -->
+<section id="contact" class="on-dark py-20 bg-navy text-white section" aria-labelledby="contact-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-16">
+      <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold mb-2">Get In Touch</h2>
+      <p class="text-chrome max-w-2xl mx-auto">Visit our showroom or send a bulk‑requirement inquiry – we’ll revert within 24 hrs.</p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Business Info -->
+      <div class="space-y-6">
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 rounded-full bg-chrome/10 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-user text-navy text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Owner</h3>
+            <p class="text-chrome">Ankur Jain</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 rounded-full bg-chrome/10 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-phone text-navy text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Phone</h3>
+            <p><a class="text-chrome hover:text-white underline underline-offset-4" href="tel:+919868139951">+91 98681 39951</a></p>
+            <p><a class="text-chrome hover:text-white underline underline-offset-4" href="tel:+919868270027">+91 98682 70027</a></p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 rounded-full bg-chrome/10 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-location-dot text-navy text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Address</h3>
+            <p><a class="text-chrome hover:text-white underline underline-offset-4" href="https://www.google.com/maps/search/?api=1&amp;query=Devli%2C%20Sangam%20Vihar%2C%20New%20Delhi%20110080" target="_blank" rel="noopener noreferrer">Devli, Sangam Vihar, New Delhi - 110080</a></p>
+            <p class="text-chrome text-sm">(Opposite Tinu Public School)</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp quick link -->
+        <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center w-full py-4 bg-chrome text-navy font-semibold rounded-full hover:bg-white transition mt-4">
+          <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Quick Chat via WhatsApp
+        </a>
+      </div>
+
+      <!-- Inquiry Form -->
+      <form id="inquiryForm" method="post" class="bg-white/5 rounded-2xl p-8 space-y-6 backdrop-blur-sm" aria-label="Bulk inquiry form">
+        <div>
+          <label for="name" class="block text-sm font-medium text-chrome mb-1">Full Name</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
+                 placeholder="Your name">
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium text-chrome mb-1">Phone / WhatsApp</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required
+                 class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
+                 placeholder="+91 XXXXXXXXXX">
+        </div>
+        <div>
+          <label for="requirements" class="block text-sm font-medium text-chrome mb-1">Bulk Requirements (brief)</label>
+          <textarea id="requirements" name="requirements" rows="4" required
+                    class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome resize-none"
+                    placeholder="e.g. 500 pcs Jaquar single‑lever faucets, 200 pcs Pureplast 5000 L tanks…"></textarea>
+        </div>
+        <button id="inquirySubmit" type="submit" disabled
+                class="w-full py-3 bg-chrome text-navy font-semibold rounded-full hover:bg-white transition disabled:opacity-60">
+          Send Inquiry on WhatsApp
+        </button>
+        <noscript><p class="text-xs text-chrome text-center">Enable JavaScript to prepare an inquiry, or use the WhatsApp chat link.</p></noscript>
+        <p id="formStatus" class="text-xs text-chrome text-center" aria-live="polite">Your message opens in WhatsApp so you can review and send it.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="bg-navy text-chrome py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="footer-content flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm">&copy; <span id="currentYear">2026</span> Jaintex Bathfit. All rights reserved.</p>
+
+      <nav class="flex space-x-6 text-sm" aria-label="Footer links">
+        <a href="#home" class="hover:text-white transition">Home</a>
+        <a href="#brands" class="hover:text-white transition">Brands</a>
+        <a href="#categories" class="hover:text-white transition">Products</a>
+        <a href="#faq" class="hover:text-white transition">FAQs</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
+         class="inline-flex items-center px-4 py-2 bg-chrome text-navy font-medium rounded-full hover:bg-white transition">
+        <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</footer>
+
+<a id="backToTop" href="#home" class="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-lg transition hover:bg-slate focus-visible:outline-white" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</a>
+
+<!-- ============================================================
+     SIMPLE INTERSECTION OBSERVER FOR FADE‑IN
+============================================================ -->
+<script>
+  if ('IntersectionObserver' in window) document.documentElement.classList.add('js');
+
+  // Mobile menu toggle
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeMenu = () => {
+    menu.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+    menuIcon.classList.replace('fa-xmark', 'fa-bars');
+  };
+  btn?.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(isOpen));
+    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    menuIcon.classList.toggle('fa-bars', !isOpen);
+    menuIcon.classList.toggle('fa-xmark', isOpen);
+  });
+  window.matchMedia('(min-width: 768px)').addEventListener('change', closeMenu);
+  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      btn.focus();
+    }
+  });
+
+  document.querySelectorAll('[data-category]').forEach(link => {
+    link.addEventListener('click', () => {
+      const requirements = document.getElementById('requirements');
+      requirements.value = `I'm interested in ${link.dataset.category}. Please share product options and a bulk quote.`;
+    });
+  });
+
+  // Open a reviewed, prefilled inquiry in WhatsApp (no server required).
+  const inquiryForm = document.getElementById('inquiryForm');
+  inquiryForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    const formData = new FormData(inquiryForm);
+    const message = [
+      'Hello Jaintex Bathfit, I would like to make a bulk inquiry.',
+      '',
+      `Name: ${formData.get('name')}`,
+      `Phone / WhatsApp: ${formData.get('phone')}`,
+      `Requirements: ${formData.get('requirements')}`
+    ].join('\n');
+    const url = `https://wa.me/919868139951?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
+  if (inquiryForm) document.getElementById('inquirySubmit').disabled = false;
+
+  const currentYear = document.getElementById('currentYear');
+  if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+  // Fade‑in sections on scroll
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.1});
+    document.querySelectorAll('.section').forEach(s => observer.observe(s));
+  }
+</script>
+</body>
+</html>
