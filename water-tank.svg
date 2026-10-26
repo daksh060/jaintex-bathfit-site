@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Household water storage tank</title>
+  <desc id="desc">Illustration of a durable blue household water tank against a clean, light blue background.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef8ff"/>
+      <stop offset="1" stop-color="#c9e4f4"/>
+    </linearGradient>
+    <linearGradient id="tank" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#123864"/>
+      <stop offset=".22" stop-color="#28669b"/>
+      <stop offset=".58" stop-color="#347db1"/>
+      <stop offset="1" stop-color="#16416e"/>
+    </linearGradient>
+    <linearGradient id="lid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b8dbb"/>
+      <stop offset="1" stop-color="#1b4d7b"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="600" fill="url(#sky)"/>
+  <circle cx="730" cy="118" r="78" fill="#fff" opacity=".32"/>
+  <path d="M0 445c140-55 238-28 370 5s260 32 530-31v181H0Z" fill="#d8edf7"/>
+  <ellipse cx="452" cy="506" rx="218" ry="27" fill="#173b5c" opacity=".22" filter="url(#shadow)"/>
+  <path d="M330 478v31h245v-31" fill="none" stroke="#274e6d" stroke-width="15" stroke-linecap="round"/>
+  <path d="M338 472h230l-21 34H359Z" fill="#dce7ed" stroke="#9db6c6" stroke-width="5"/>
+  <path d="M334 213c0-35 54-64 121-64s121 29 121 64v234c0 38-54 67-121 67s-121-29-121-67Z" fill="url(#tank)" stroke="#12385e" stroke-width="7"/>
+  <ellipse cx="455" cy="214" rx="121" ry="49" fill="url(#lid)" stroke="#12385e" stroke-width="7"/>
+  <path d="M355 274c56 22 145 22 200 0M343 333c68 24 157 24 224 0M339 393c72 24 160 24 231 0M339 447c70 24 160 24 231 0" fill="none" stroke="#7cb2d5" stroke-width="9" opacity=".65"/>
+  <path d="M420 160v-20c0-11 14-20 35-20s35 9 35 20v20" fill="#204f79" stroke="#12385e" stroke-width="7"/>
+  <path d="M337 229c-5 93-1 171 7 208" fill="none" stroke="#9cc8e3" stroke-width="9" stroke-linecap="round" opacity=".5"/>
+  <path d="M577 300h38v24h-38" fill="#28669b" stroke="#12385e" stroke-width="7" stroke-linejoin="round"/>
+</svg>

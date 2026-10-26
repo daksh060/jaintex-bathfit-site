@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Jaintex Bathfit – Premium Bath Fittings & Commercial Hardware</title>
-<meta name="description" content="Jaintex Bathfit supplies premium bath fittings, water-storage tanks and architectural hardware. Contact us for wholesale and project inquiries in New Delhi.">
+<title>Jaintex Bathfit | Taps, Tiles &amp; Home Products</title>
+<meta name="description" content="Explore bath fittings, tiles, water-storage tanks and home hardware at Jaintex Bathfit in New Delhi. Call or WhatsApp for product availability and prices.">
 <meta name="theme-color" content="#0B1D3A">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jaintex Bathfit | Bath Fittings & Hardware">
-<meta property="og:description" content="Explore bath fittings, water-storage tanks, architectural hardware and kitchen utilities. Contact us for a bulk quote.">
+<meta property="og:title" content="Jaintex Bathfit | Taps, Tiles & Home Products">
+<meta property="og:description" content="Explore bath fittings, tiles, water-storage tanks and home hardware. Contact Jaintex Bathfit for product availability and prices.">
 <meta property="og:url" content="https://daksh060.github.io/jaintex-bathfit-site/">
-<meta property="og:image" content="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://daksh060.github.io/jaintex-bathfit-site/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -40,13 +40,16 @@
 </script>
 <!-- Inter font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   html { scroll-padding-top: 5rem; }
+  html[lang="hi"] body { font-family:"Noto Sans Devanagari", "Nirmala UI", sans-serif; }
   body { overflow-x:hidden; }
   .jb-mark { display:inline-flex; align-items:center; justify-content:center; flex:none; width:2.75rem; height:2.75rem; border:1px solid #D4D9DD; border-radius:.75rem; background:linear-gradient(145deg,#132d52,#0B1D3A); box-shadow:0 5px 16px rgb(11 29 58 / 18%); }
   .jb-mark svg { width:2.15rem; height:2.15rem; }
   .category-card[hidden] { display:none !important; }
+  .language-picker { min-height:2.75rem; }
   .filter-chip[aria-pressed="true"] { background:#0B1D3A; color:#fff; border-color:#0B1D3A; }
   #shareStatus { min-height:1.5rem; }
   html.js .section { opacity:0; transform:translateY(20px); transition:opacity .6s ease-out, transform .6s ease-out; }
@@ -107,7 +110,7 @@
      NAVIGATION
 ============================================================ -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate/10">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation" data-i18n-aria="mainNavigation">
     <div class="flex items-center justify-between h-16">
       <!-- Brand -->
       <a href="#home" class="flex items-center gap-3 text-navy font-bold" aria-label="Jaintex Bathfit home">
@@ -123,19 +126,26 @@
 
       <!-- Desktop links -->
       <ul class="hidden md:flex items-center space-x-8">
-        <li><a href="#home" class="text-slate hover:text-navy transition">Home</a></li>
-        <li><a href="#brands" class="text-slate hover:text-navy transition">Brands</a></li>
-        <li><a href="#categories" class="text-slate hover:text-navy transition">Products</a></li>
-        <li><a href="#faq" class="text-slate hover:text-navy transition">FAQs</a></li>
-        <li><a href="#contact" class="text-slate hover:text-navy transition">Contact</a></li>
+        <li><a href="#home" class="text-slate hover:text-navy transition" data-i18n="home">Home</a></li>
+        <li><a href="#brands" class="text-slate hover:text-navy transition" data-i18n="brands">Brands</a></li>
+        <li><a href="#categories" class="text-slate hover:text-navy transition" data-i18n="products">Products</a></li>
+        <li><a href="#faq" class="text-slate hover:text-navy transition" data-i18n="faqs">FAQs</a></li>
+        <li><a href="#contact" class="text-slate hover:text-navy transition" data-i18n="contact">Contact</a></li>
       </ul>
 
       <!-- WhatsApp CTA -->
-      <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
-         class="hidden sm:inline-flex items-center px-4 py-2 bg-navy text-white rounded-full font-medium hover:bg-slate transition shadow-lg"
-         aria-label="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
-      </a>
+      <div class="flex items-center gap-2">
+        <label class="sr-only" for="languageSelect" data-i18n="chooseLanguage">Choose language</label>
+        <select id="languageSelect" class="language-picker rounded-lg border border-slate/20 bg-white px-2 text-sm font-semibold text-navy" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+        <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
+           class="hidden sm:inline-flex items-center min-h-11 px-4 py-2 bg-navy text-white rounded-full font-medium hover:bg-slate transition shadow-lg"
+           aria-label="Chat on WhatsApp" data-i18n-aria="chatWhatsApp">
+          <i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i><span data-i18n="whatsApp">WhatsApp</span>
+        </a>
+      </div>
 
       <!-- Mobile menu button -->
       <button id="menuBtn" class="md:hidden inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg p-2 text-navy" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
@@ -145,15 +155,15 @@
 
     <!-- Mobile menu -->
     <ul id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2">
-      <li><a href="#home" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Home</a></li>
-      <li><a href="#brands" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Brands</a></li>
-      <li><a href="#categories" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Products</a></li>
-      <li><a href="#faq" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">FAQs</a></li>
-      <li><a href="#contact" class="flex min-h-11 items-center py-2 text-slate hover:text-navy">Contact</a></li>
+      <li><a href="#home" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="home">Home</a></li>
+      <li><a href="#brands" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="brands">Brands</a></li>
+      <li><a href="#categories" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="products">Products</a></li>
+      <li><a href="#faq" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="faqs">FAQs</a></li>
+      <li><a href="#contact" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="contact">Contact</a></li>
       <li>
         <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
-           class="block w-full min-h-12 text-center py-3 bg-navy text-white rounded-full font-medium mt-2">
-          <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+           class="block w-full min-h-12 text-center py-3 bg-navy text-white rounded-full font-medium mt-2" aria-label="Chat on WhatsApp" data-i18n-aria="chatWhatsApp">
+          <i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i> <span data-i18n="whatsApp">WhatsApp</span>
         </a>
       </li>
     </ul>
@@ -165,25 +175,25 @@
      HERO
 ============================================================ -->
 <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-         style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1920&q=80');">
-  <div class="absolute inset-0 bg-navy/70"></div>
+         style="background-image:url('https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1920&q=85');">
+  <div class="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/35 to-navy/20"></div>
   <div class="relative max-w-5xl mx-auto px-6 text-center text-white">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
-      Premium Bath Fittings &amp; Commercial Hardware Solutions
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4" data-i18n="heroTitle">
+      Beautiful Taps, Tiles &amp; Bath Fittings for Your Home
     </h1>
-    <p class="text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto mb-10">
-      Trusted wholesale partner for durable, high‑grade bath fittings, water‑storage tanks and architectural hardware — delivered on time, every time.
+    <p class="text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto mb-10" data-i18n="heroText">
+      Discover stylish taps, beautiful tiles, bath fittings and practical home hardware for your home — with friendly service from our New Delhi showroom.
     </p>
     <div class="hero-actions flex flex-wrap justify-center gap-3">
       <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
-         class="inline-flex min-h-12 items-center px-8 py-4 bg-chrome text-navy font-semibold rounded-full shadow-xl hover:bg-white transition">
-        <i class="fa-brands fa-whatsapp mr-2 text-xl" aria-hidden="true"></i> Get a Quote on WhatsApp
+         class="inline-flex min-h-12 items-center px-8 py-4 bg-chrome text-navy font-semibold rounded-full shadow-xl hover:bg-white transition" data-i18n-aria="chatWhatsApp">
+        <i class="fa-brands fa-whatsapp mr-2 text-xl" aria-hidden="true"></i> <span data-i18n="askOnWhatsApp">Ask us on WhatsApp</span>
       </a>
       <a href="#categories" class="inline-flex min-h-12 items-center px-8 py-4 border border-white/70 text-white font-semibold rounded-full hover:bg-white/10 transition">
-        Explore products <i class="fa-solid fa-arrow-down ml-2" aria-hidden="true"></i>
+        <span data-i18n="exploreProducts">Explore products</span> <i class="fa-solid fa-arrow-down ml-2" aria-hidden="true"></i>
       </a>
       <button id="shareSite" type="button" class="inline-flex min-h-12 items-center px-6 py-4 border border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition">
-        <i class="fa-solid fa-share-nodes mr-2" aria-hidden="true"></i> Share this website
+        <i class="fa-solid fa-share-nodes mr-2" aria-hidden="true"></i> <span data-i18n="shareWebsite">Share this website</span>
       </button>
     </div>
     <p id="shareStatus" class="mt-3 text-sm text-white/90" aria-live="polite"></p>
@@ -199,8 +209,8 @@
 <section id="brands" class="py-20 bg-white section" aria-labelledby="brands-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <header class="text-center mb-16">
-      <h2 id="brands-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2">Trusted Brands We Supply</h2>
-      <p class="text-slate max-w-2xl mx-auto">Authorized traders for India’s most respected bath‑ware, tile and tank manufacturers.</p>
+      <h2 id="brands-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2" data-i18n="brandsTitle">Popular Brands</h2>
+      <p class="text-slate max-w-2xl mx-auto" data-i18n="brandsText">Explore the brands available at Jaintex Bathfit. Contact us to check current products and availability.</p>
     </header>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -208,28 +218,28 @@
       <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
         <i class="fa-solid fa-shower text-4xl text-navy mb-4"></i>
         <h3 class="text-xl font-semibold text-navy mb-1">Jaquar</h3>
-        <p class="text-slate text-sm">Bath Fittings &amp; Sanitaryware</p>
+        <p class="text-slate text-sm" data-i18n="brandJaquar">Bath fittings &amp; sanitaryware</p>
       </article>
 
       <!-- Somany -->
       <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
         <i class="fa-solid fa-border-all text-4xl text-navy mb-4"></i>
         <h3 class="text-xl font-semibold text-navy mb-1">Somany</h3>
-        <p class="text-slate text-sm">Premium Tiles &amp; Bathware</p>
+        <p class="text-slate text-sm" data-i18n="brandSomany">Tiles &amp; bathware</p>
       </article>
 
       <!-- Pureplast -->
       <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
         <i class="fa-solid fa-droplet text-4xl text-navy mb-4"></i>
         <h3 class="text-xl font-semibold text-navy mb-1">Pureplast</h3>
-        <p class="text-slate text-sm">High‑Quality Water Storage Tanks</p>
+        <p class="text-slate text-sm" data-i18n="brandPureplast">Water storage tanks</p>
       </article>
 
       <!-- Olina -->
       <article class="bg-light rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition">
         <i class="fa-solid fa-wrench text-4xl text-navy mb-4"></i>
         <h3 class="text-xl font-semibold text-navy mb-1">Olina</h3>
-        <p class="text-slate text-sm">Durable Water Tanks &amp; Hardware</p>
+        <p class="text-slate text-sm" data-i18n="brandOlina">Water tanks &amp; hardware</p>
       </article>
     </div>
   </div>
@@ -241,69 +251,81 @@
 <section id="categories" class="on-dark py-20 bg-navy text-white section" aria-labelledby="cat-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <header class="text-center mb-16">
-      <h2 id="cat-heading" class="text-3xl sm:text-4xl font-bold mb-2">Our Trading Segments</h2>
-      <p class="text-chrome max-w-2xl mx-auto">Explore the core product families we distribute across North India.</p>
+      <h2 id="cat-heading" class="text-3xl sm:text-4xl font-bold mb-2" data-i18n="categoriesTitle">Products for Your Home</h2>
+      <p class="text-chrome max-w-2xl mx-auto" data-i18n="categoriesText">Explore taps, bathroom fittings, tiles, tanks and kitchen essentials at our New Delhi showroom.</p>
     </header>
 
     <div class="mx-auto mb-8 max-w-3xl">
-      <label for="categorySearch" class="sr-only">Search product categories</label>
+      <label for="categorySearch" class="sr-only" data-i18n="searchProducts">Search products</label>
       <div class="relative">
         <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate" aria-hidden="true"></i>
-        <input id="categorySearch" type="search" autocomplete="off" placeholder="Search products, e.g. faucets or tanks"
+        <input id="categorySearch" type="search" autocomplete="off" placeholder="Search products, e.g. taps or tiles" data-i18n-placeholder="searchPlaceholder"
                class="w-full min-h-12 rounded-xl border border-white/30 bg-white px-11 py-3 text-base text-navy placeholder-slate focus:outline-none focus:ring-2 focus:ring-chrome">
       </div>
-      <div class="mt-4 flex flex-wrap justify-center gap-2" role="group" aria-label="Filter product categories">
-        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="all" aria-pressed="true">All products</button>
-        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="bath" aria-pressed="false">Bath fittings</button>
-        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="tanks" aria-pressed="false">Water tanks</button>
-        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="hardware" aria-pressed="false">Hardware</button>
-        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/40 px-4 text-sm font-medium text-white transition" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+      <div class="mt-4 flex flex-wrap justify-center gap-2" role="group" aria-label="Filter product categories" data-i18n-aria="filterProducts">
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/60 px-4 text-sm font-medium text-white transition" data-filter="all" aria-pressed="true" data-i18n="allProducts">All products</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/60 px-4 text-sm font-medium text-white transition" data-filter="bath" aria-pressed="false" data-i18n="bathFittings">Bath fittings</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/60 px-4 text-sm font-medium text-white transition" data-filter="tanks" aria-pressed="false" data-i18n="waterTanks">Water tanks</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/60 px-4 text-sm font-medium text-white transition" data-filter="tiles" aria-pressed="false" data-i18n="tiles">Tiles</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/60 px-4 text-sm font-medium text-white transition" data-filter="hardware" aria-pressed="false" data-i18n="hardware">Hardware</button>
+        <button type="button" class="filter-chip min-h-11 rounded-full border border-white/60 px-4 text-sm font-medium text-white transition" data-filter="kitchen" aria-pressed="false" data-i18n="kitchen">Kitchen</button>
       </div>
-      <p id="categoryResults" class="mt-3 text-center text-sm text-chrome" aria-live="polite">Showing all 4 categories.</p>
+      <p id="categoryResults" class="mt-3 text-center text-sm text-white" aria-live="polite" data-i18n="showingAll">Showing all 5 categories.</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Bath Fittings -->
-      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="bath" data-search="bath fittings faucets showers accessories taps sanitaryware">
-        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80"
-             alt="Chrome bath faucet" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
-          <h3 class="text-xl font-semibold mb-1">Bath Fittings</h3>
-          <p class="text-chrome text-sm">Faucets, showers &amp; accessories</p>
-          <a href="#contact" data-category="Bath Fittings" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Bath Fittings</a>
+      <article class="category-card relative min-h-64 rounded-xl overflow-hidden shadow-lg group" data-category-card="bath" data-search="bath fittings faucets showers accessories taps sanitaryware">
+        <img src="https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=900&q=85"
+             alt="Polished gold bathroom taps above a marble sink" data-i18n-alt="bathImageAlt" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-navy/95 via-navy/25 to-transparent p-5 pb-4 text-center">
+          <h3 class="text-xl font-semibold mb-1" data-i18n="bathFittings">Bath Fittings</h3>
+          <p class="text-white text-sm" data-i18n="bathDescription">Taps, showers &amp; bathroom accessories</p>
+          <a href="#contact" data-category="Bath Fittings" class="mt-2 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome" data-i18n="askAbout">Ask about this</a>
         </div>
       </article>
 
       <!-- Water Storage Tanks -->
-      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="tanks" data-search="water storage tanks overhead loft underground water">
-        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80"
-             alt="Water storage infrastructure" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
-          <h3 class="text-xl font-semibold mb-1">Water Storage Tanks</h3>
-          <p class="text-chrome text-sm">Overhead, loft &amp; underground tanks</p>
-          <a href="#contact" data-category="Water Storage Tanks" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Water Tanks</a>
+      <article class="category-card relative min-h-64 rounded-xl overflow-hidden shadow-lg group" data-category-card="tanks" data-search="water storage tanks overhead loft underground water">
+        <img src="water-tank.svg"
+             alt="Illustration of a household water storage tank" data-i18n-alt="tankImageAlt" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-navy/95 via-navy/25 to-transparent p-5 pb-4 text-center">
+          <h3 class="text-xl font-semibold mb-1" data-i18n="waterTanks">Water Storage Tanks</h3>
+          <p class="text-white text-sm" data-i18n="tankDescription">Storage tanks for home and everyday use</p>
+          <a href="#contact" data-category="Water Storage Tanks" class="mt-2 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome" data-i18n="askAbout">Ask about this</a>
+        </div>
+      </article>
+
+      <!-- Tiles -->
+      <article class="category-card relative min-h-64 rounded-xl overflow-hidden shadow-lg group" data-category-card="tiles" data-search="tiles flooring wall tile ceramic porcelain surfaces">
+        <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=900&q=85"
+             alt="Large gray wall and floor tiles in a modern bathroom" data-i18n-alt="tileImageAlt" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-navy/95 via-navy/25 to-transparent p-5 pb-4 text-center">
+          <h3 class="text-xl font-semibold mb-1" data-i18n="tiles">Tiles</h3>
+          <p class="text-white text-sm" data-i18n="tileDescription">Floor and wall tiles for your home</p>
+          <a href="#contact" data-category="Tiles" class="mt-2 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome" data-i18n="askAbout">Ask about this</a>
         </div>
       </article>
 
       <!-- Architectural Hardware -->
-      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="hardware" data-search="architectural hardware handles knobs hinges locks">
+      <article class="category-card relative min-h-64 rounded-xl overflow-hidden shadow-lg group" data-category-card="hardware" data-search="architectural hardware handles knobs hinges locks">
         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
              alt="Architectural interior details" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
-          <h3 class="text-xl font-semibold mb-1">Architectural Hardware</h3>
-          <p class="text-chrome text-sm">Handles, knobs, hinges &amp; locks</p>
-          <a href="#contact" data-category="Architectural Hardware" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Hardware</a>
+        <div class="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-navy/95 via-navy/25 to-transparent p-5 pb-4 text-center">
+          <h3 class="text-xl font-semibold mb-1" data-i18n="hardware">Home Hardware</h3>
+          <p class="text-white text-sm" data-i18n="hardwareDescription">Handles, hinges, locks &amp; fittings</p>
+          <a href="#contact" data-category="Home Hardware" class="mt-2 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome" data-i18n="askAbout">Ask about this</a>
         </div>
       </article>
 
       <!-- Kitchen Utilities -->
-      <article class="category-card relative min-h-56 rounded-xl overflow-hidden shadow-lg group" data-category-card="kitchen" data-search="kitchen utilities sinks taps modular accessories">
+      <article class="category-card relative min-h-64 rounded-xl overflow-hidden shadow-lg group" data-category-card="kitchen" data-search="kitchen utilities sinks taps modular accessories">
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
              alt="Modern kitchen utilities" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-navy/70 flex flex-col items-center justify-center p-4 text-center">
-          <h3 class="text-xl font-semibold mb-1">Kitchen Utilities</h3>
-          <p class="text-chrome text-sm">Sinks, taps &amp; modular accessories</p>
-          <a href="#contact" data-category="Kitchen Utilities" class="mt-3 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome">Ask about Kitchen Products</a>
+        <div class="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-navy/95 via-navy/25 to-transparent p-5 pb-4 text-center">
+          <h3 class="text-xl font-semibold mb-1" data-i18n="kitchen">Kitchen Utilities</h3>
+          <p class="text-white text-sm" data-i18n="kitchenDescription">Sinks, taps &amp; kitchen essentials</p>
+          <a href="#contact" data-category="Kitchen Utilities" class="mt-2 inline-flex min-h-11 items-center justify-center px-2 text-sm font-semibold text-white underline underline-offset-4 hover:text-chrome" data-i18n="askAbout">Ask about this</a>
         </div>
       </article>
     </div>
@@ -316,18 +338,18 @@
 <section class="py-20 bg-white section" aria-labelledby="value-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <header class="text-center mb-16">
-      <h2 id="value-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2">Why Choose Jaintex Bathfit?</h2>
-      <p class="text-slate max-w-2xl mx-auto">Three pillars that make us the preferred wholesale partner.</p>
+      <h2 id="value-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2" data-i18n="whyUs">Why Visit Jaintex Bathfit?</h2>
+      <p class="text-slate max-w-2xl mx-auto" data-i18n="whyUsText">Friendly service to help you find the right products for your home.</p>
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Bulk Wholesale Pricing -->
+      <!-- Home products -->
       <article class="bg-light rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
         <div class="w-16 h-16 mx-auto mb-4 bg-navy/10 rounded-full flex items-center justify-center">
           <i class="fa-solid fa-tag text-3xl text-navy"></i>
         </div>
-        <h3 class="text-xl font-semibold text-navy mb-2">Bulk Wholesale Pricing</h3>
-        <p class="text-slate">Competitive rates on volume orders – maximise your margin without compromising quality.</p>
+        <h3 class="text-xl font-semibold text-navy mb-2" data-i18n="productChoice">Products for Every Room</h3>
+        <p class="text-slate" data-i18n="productChoiceText">Browse taps, bath fittings, tiles, tanks and everyday home essentials.</p>
       </article>
 
       <!-- Uncompromised Quality Control -->
@@ -335,8 +357,8 @@
         <div class="w-16 h-16 mx-auto mb-4 bg-navy/10 rounded-full flex items-center justify-center">
           <i class="fa-solid fa-shield-halved text-3xl text-navy"></i>
         </div>
-        <h3 class="text-xl font-semibold text-navy mb-2">Uncompromised Quality Control</h3>
-        <p class="text-slate">Every lot inspected against ISI/ISO standards before dispatch.</p>
+        <h3 class="text-xl font-semibold text-navy mb-2" data-i18n="helpChoosing">Help Choosing</h3>
+        <p class="text-slate" data-i18n="helpChoosingText">Talk to us about product options, availability and what suits your needs.</p>
       </article>
 
       <!-- Reliable Supply Chain Network -->
@@ -344,8 +366,8 @@
         <div class="w-16 h-16 mx-auto mb-4 bg-navy/10 rounded-full flex items-center justify-center">
           <i class="fa-solid fa-truck-fast text-3xl text-navy"></i>
         </div>
-        <h3 class="text-xl font-semibold text-navy mb-2">Reliable Supply Chain Network</h3>
-        <p class="text-slate">Pan‑India logistics with on‑time delivery guarantees for project timelines.</p>
+        <h3 class="text-xl font-semibold text-navy mb-2" data-i18n="visitUs">Visit or Contact Us</h3>
+        <p class="text-slate" data-i18n="visitUsText">Visit our New Delhi showroom or contact us to check product availability.</p>
       </article>
     </div>
   </div>
@@ -357,33 +379,33 @@
 <section id="faq" class="py-20 bg-light section" aria-labelledby="faq-heading">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <header class="text-center mb-12">
-      <h2 id="faq-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2">Frequently Asked Questions</h2>
-      <p class="text-slate">Need product availability, pricing or delivery details? Get in touch for current information.</p>
+      <h2 id="faq-heading" class="text-3xl sm:text-4xl font-bold text-navy mb-2" data-i18n="faqsTitle">Frequently Asked Questions</h2>
+      <p class="text-slate" data-i18n="faqsIntro">Have a question about products, prices or visiting us? Get in touch.</p>
     </header>
     <div class="space-y-4">
       <details class="group rounded-xl bg-white p-6 shadow-sm">
         <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
-          How can I get pricing or a bulk quote?
+          <span data-i18n="faqPriceQuestion">How can I check product prices?</span>
           <i class="fa-solid fa-plus text-slate transition group-open:rotate-45" aria-hidden="true"></i>
         </summary>
-        <p class="mt-4 text-slate">Send the products, brands, quantities and delivery location through the inquiry form or WhatsApp. Jaintex Bathfit can confirm current pricing and availability.</p>
+        <p class="mt-4 text-slate" data-i18n="faqPriceAnswer">Contact us with the product you are interested in. We can confirm current prices and availability.</p>
       </details>
       <details class="group rounded-xl bg-white p-6 shadow-sm">
         <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
-          Which product categories do you supply?
+          <span data-i18n="faqProductsQuestion">What products can I find here?</span>
           <i class="fa-solid fa-plus text-slate transition group-open:rotate-45" aria-hidden="true"></i>
         </summary>
-        <p class="mt-4 text-slate">The listed categories include bath fittings, water-storage tanks, architectural hardware and kitchen utilities. Contact the team to confirm specific products and brands.</p>
+        <p class="mt-4 text-slate" data-i18n="faqProductsAnswer">Explore taps and bath fittings, tiles, water-storage tanks, home hardware and kitchen essentials. Ask us about specific brands and products.</p>
       </details>
       <details class="group rounded-xl bg-white p-6 shadow-sm">
         <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
-          Can you deliver to my location?
+          <span data-i18n="faqVisitQuestion">Where is the showroom?</span>
           <i class="fa-solid fa-plus text-slate transition group-open:rotate-45" aria-hidden="true"></i>
         </summary>
-        <p class="mt-4 text-slate">Share your delivery location and order details so the team can confirm serviceability, delivery options and timelines for your requirement.</p>
+        <p class="mt-4 text-slate" data-i18n="faqVisitAnswer">We are in Devli, Sangam Vihar, New Delhi. Open the address below for directions or call us before visiting.</p>
       </details>
     </div>
-    <p class="mt-8 text-center text-slate">Have another question? <a class="font-semibold text-navy underline underline-offset-4" href="#contact">Contact Jaintex Bathfit</a>.</p>
+    <p class="mt-8 text-center text-slate"><span data-i18n="faqMore">Have another question?</span> <a class="font-semibold text-navy underline underline-offset-4" href="#contact" data-i18n="contactUs">Contact Jaintex Bathfit</a>.</p>
   </div>
 </section>
 
@@ -393,8 +415,8 @@
 <section id="contact" class="on-dark py-20 bg-navy text-white section" aria-labelledby="contact-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <header class="text-center mb-16">
-      <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold mb-2">Get In Touch</h2>
-      <p class="text-chrome max-w-2xl mx-auto">Visit our showroom or send a bulk‑requirement inquiry – we’ll revert within 24 hrs.</p>
+      <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold mb-2" data-i18n="contactTitle">Visit or Contact Us</h2>
+      <p class="text-chrome max-w-2xl mx-auto" data-i18n="contactIntro">Visit the showroom, call us, or send a message on WhatsApp to ask about products.</p>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -405,7 +427,7 @@
             <i class="fa-solid fa-user text-navy text-xl"></i>
           </div>
           <div>
-            <h3 class="font-semibold text-lg">Owner</h3>
+            <h3 class="font-semibold text-lg" data-i18n="owner">Owner</h3>
             <p class="text-chrome">Ankur Jain</p>
           </div>
         </div>
@@ -415,7 +437,7 @@
             <i class="fa-solid fa-phone text-navy text-xl"></i>
           </div>
           <div>
-            <h3 class="font-semibold text-lg">Phone</h3>
+            <h3 class="font-semibold text-lg" data-i18n="phone">Phone</h3>
             <p><a class="text-chrome hover:text-white underline underline-offset-4" href="tel:+919868139951">+91 98681 39951</a></p>
             <p><a class="text-chrome hover:text-white underline underline-offset-4" href="tel:+919868270027">+91 98682 70027</a></p>
           </div>
@@ -426,7 +448,7 @@
             <i class="fa-solid fa-location-dot text-navy text-xl"></i>
           </div>
           <div>
-            <h3 class="font-semibold text-lg">Address</h3>
+            <h3 class="font-semibold text-lg" data-i18n="address">Address</h3>
             <p><a class="text-chrome hover:text-white underline underline-offset-4" href="https://www.google.com/maps/search/?api=1&amp;query=Devli%2C%20Sangam%20Vihar%2C%20New%20Delhi%20110080" target="_blank" rel="noopener noreferrer">Devli, Sangam Vihar, New Delhi - 110080</a></p>
             <p class="text-chrome text-sm">(Opposite Tinu Public School)</p>
           </div>
@@ -435,55 +457,56 @@
         <!-- WhatsApp quick link -->
         <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
            class="inline-flex items-center justify-center w-full py-4 bg-chrome text-navy font-semibold rounded-full hover:bg-white transition mt-4">
-          <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Quick Chat via WhatsApp
+          <i class="fa-brands fa-whatsapp mr-2 text-xl" aria-hidden="true"></i> <span data-i18n="quickChat">Message us on WhatsApp</span>
         </a>
       </div>
 
       <!-- Inquiry Form -->
-      <form id="inquiryForm" method="post" class="bg-white/5 rounded-2xl p-8 space-y-6 backdrop-blur-sm" aria-label="Bulk inquiry form">
+      <form id="inquiryForm" method="post" class="bg-white/5 rounded-2xl p-8 space-y-6 backdrop-blur-sm" aria-label="Product inquiry form" data-i18n-aria="inquiryForm">
         <div>
-          <label for="name" class="block text-sm font-medium text-chrome mb-1">Full Name</label>
+          <label for="name" class="block text-sm font-medium text-chrome mb-1" data-i18n="fullName">Your name</label>
           <input type="text" id="name" name="name" autocomplete="name" required
                  class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
-                 placeholder="Your name">
+                 placeholder="Enter your name" data-i18n-placeholder="namePlaceholder">
         </div>
         <div>
-          <label for="phone" class="block text-sm font-medium text-chrome mb-1">Phone / WhatsApp</label>
+          <label for="phone" class="block text-sm font-medium text-chrome mb-1" data-i18n="phoneWhatsApp">Phone / WhatsApp</label>
           <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required
                  class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
                  placeholder="+91 XXXXXXXXXX">
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label for="productCategory" class="block text-sm font-medium text-chrome mb-1">Product category</label>
+            <label for="productCategory" class="block text-sm font-medium text-chrome mb-1" data-i18n="productCategory">Product category</label>
             <select id="productCategory" name="category" class="w-full min-h-12 px-4 py-3 rounded-lg bg-navy border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white">
-              <option value="">Choose a category</option>
-              <option>Bath Fittings</option>
-              <option>Water Storage Tanks</option>
-              <option>Architectural Hardware</option>
-              <option>Kitchen Utilities</option>
-              <option>Other / Multiple categories</option>
+              <option value="" data-i18n="chooseCategory">Choose a category</option>
+              <option value="Bath Fittings" data-i18n="bathFittings">Bath Fittings</option>
+              <option value="Water Storage Tanks" data-i18n="waterTanks">Water Storage Tanks</option>
+              <option value="Tiles" data-i18n="tiles">Tiles</option>
+              <option value="Home Hardware" data-i18n="hardware">Home Hardware</option>
+              <option value="Kitchen Utilities" data-i18n="kitchen">Kitchen Utilities</option>
+              <option value="Other / Multiple categories" data-i18n="otherCategory">Other / Multiple categories</option>
             </select>
           </div>
           <div>
-            <label for="quantity" class="block text-sm font-medium text-chrome mb-1">Approx. quantity <span class="font-normal">(optional)</span></label>
+            <label for="quantity" class="block text-sm font-medium text-chrome mb-1"><span data-i18n="quantity">Approx. quantity</span> <span class="font-normal" data-i18n="optional">(optional)</span></label>
             <input type="text" id="quantity" name="quantity" inputmode="numeric" autocomplete="off"
                    class="w-full min-h-12 px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome"
-                   placeholder="e.g. 50 pieces">
+                   placeholder="e.g. 2 taps" data-i18n-placeholder="quantityPlaceholder">
           </div>
         </div>
         <div>
-          <label for="requirements" class="block text-sm font-medium text-chrome mb-1">Bulk Requirements (brief)</label>
+          <label for="requirements" class="block text-sm font-medium text-chrome mb-1" data-i18n="requirements">What are you looking for?</label>
           <textarea id="requirements" name="requirements" rows="4" required
                     class="w-full px-4 py-3 rounded-lg bg-white/10 border border-chrome/20 focus:outline-none focus:ring-2 focus:ring-chrome text-white placeholder-chrome resize-none"
-                    placeholder="e.g. 500 pcs Jaquar single‑lever faucets, 200 pcs Pureplast 5000 L tanks…"></textarea>
+                    placeholder="e.g. bathroom taps, floor tiles, or a water tank" data-i18n-placeholder="requirementsPlaceholder"></textarea>
         </div>
         <button id="inquirySubmit" type="submit" disabled
                 class="w-full py-3 bg-chrome text-navy font-semibold rounded-full hover:bg-white transition disabled:opacity-60">
-          Send Inquiry on WhatsApp
+          <span data-i18n="sendWhatsApp">Continue to WhatsApp</span>
         </button>
         <noscript><p class="text-xs text-chrome text-center">Enable JavaScript to prepare an inquiry, or use the WhatsApp chat link.</p></noscript>
-        <p id="formStatus" class="text-xs text-chrome text-center" aria-live="polite">Your message opens in WhatsApp so you can review and send it.</p>
+        <p id="formStatus" class="text-xs text-chrome text-center" aria-live="polite" data-i18n="formStatus">Your message opens in WhatsApp so you can review and send it.</p>
       </form>
     </div>
   </div>
@@ -497,30 +520,30 @@
 <footer class="bg-navy text-chrome py-10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="footer-content flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-sm">&copy; <span id="currentYear">2026</span> Jaintex Bathfit. All rights reserved.</p>
+      <p class="text-sm">&copy; <span id="currentYear">2026</span> <span data-i18n="rights">Jaintex Bathfit. All rights reserved.</span></p>
 
       <nav class="flex space-x-6 text-sm" aria-label="Footer links">
-        <a href="#home" class="hover:text-white transition">Home</a>
-        <a href="#brands" class="hover:text-white transition">Brands</a>
-        <a href="#categories" class="hover:text-white transition">Products</a>
-        <a href="#faq" class="hover:text-white transition">FAQs</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
+        <a href="#home" class="hover:text-white transition" data-i18n="home">Home</a>
+        <a href="#brands" class="hover:text-white transition" data-i18n="brands">Brands</a>
+        <a href="#categories" class="hover:text-white transition" data-i18n="products">Products</a>
+        <a href="#faq" class="hover:text-white transition" data-i18n="faqs">FAQs</a>
+        <a href="#contact" class="hover:text-white transition" data-i18n="contact">Contact</a>
       </nav>
 
       <a href="https://wa.me/919868139951" target="_blank" rel="noopener"
          class="inline-flex items-center px-4 py-2 bg-chrome text-navy font-medium rounded-full hover:bg-white transition">
-        <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+        <i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i> <span data-i18n="whatsApp">WhatsApp</span>
       </a>
     </div>
   </div>
 </footer>
 
-<nav class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-slate/10 bg-white/95 p-2 pb-[calc(.5rem+env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(11,29,58,.12)] backdrop-blur md:hidden" aria-label="Quick contact">
+<nav class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-slate/10 bg-white/95 p-2 pb-[calc(.5rem+env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(11,29,58,.12)] backdrop-blur md:hidden" aria-label="Quick contact" data-i18n-aria="quickContact">
   <a href="tel:+919868139951" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-navy/15 px-3 font-semibold text-navy">
-    <i class="fa-solid fa-phone" aria-hidden="true"></i> Call
+    <i class="fa-solid fa-phone" aria-hidden="true"></i> <span data-i18n="call">Call</span>
   </a>
   <a href="https://wa.me/919868139951" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-navy px-3 font-semibold text-white">
-    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-i18n="whatsApp">WhatsApp</span>
   </a>
 </nav>
 
@@ -532,6 +555,162 @@
      SIMPLE INTERSECTION OBSERVER FOR FADE‑IN
 ============================================================ -->
 <script>
+  const translations = {
+    en: {
+      pageTitle: "Jaintex Bathfit | Taps, Tiles & Home Products",
+      pageDescription: "Explore bath fittings, tiles, water-storage tanks and home hardware at Jaintex Bathfit in New Delhi. Call or WhatsApp for product availability and prices.",
+      chooseLanguage: "Choose language",
+      mainNavigation: "Main navigation",
+      home: "Home", brands: "Brands", products: "Products", faqs: "FAQs", contact: "Contact",
+      whatsApp: "WhatsApp", chatWhatsApp: "Chat with Jaintex Bathfit on WhatsApp",
+      heroTitle: "Beautiful Taps, Tiles & Bath Fittings for Your Home",
+      heroText: "Discover stylish taps, beautiful tiles, bath fittings and practical home hardware for your home — with friendly service from our New Delhi showroom.",
+      askOnWhatsApp: "Ask us on WhatsApp", exploreProducts: "Explore products", shareWebsite: "Share this website",
+      brandsTitle: "Popular Brands",
+      brandsText: "Explore the brands available at Jaintex Bathfit. Contact us to check current products and availability.",
+      brandJaquar: "Bath fittings & sanitaryware", brandSomany: "Tiles & bathware",
+      brandPureplast: "Water storage tanks", brandOlina: "Water tanks & hardware",
+      categoriesTitle: "Products for Your Home",
+      categoriesText: "Explore taps, bathroom fittings, tiles, tanks and kitchen essentials at our New Delhi showroom.",
+      searchProducts: "Search products", searchPlaceholder: "Search products, e.g. taps or tiles",
+      filterProducts: "Filter product categories", allProducts: "All products",
+      bathFittings: "Bath Fittings", waterTanks: "Water Storage Tanks", tiles: "Tiles",
+      hardware: "Home Hardware", kitchen: "Kitchen Utilities",
+      showingAll: "Showing all 5 categories.", bathDescription: "Taps, showers & bathroom accessories",
+      tankDescription: "Storage tanks for home and everyday use", tileDescription: "Floor and wall tiles for your home",
+      hardwareDescription: "Handles, hinges, locks & fittings", kitchenDescription: "Sinks, taps & kitchen essentials",
+      askAbout: "Ask about this",
+      whyUs: "Why Visit Jaintex Bathfit?", whyUsText: "Friendly service to help you find the right products for your home.",
+      productChoice: "Products for Every Room", productChoiceText: "Browse taps, bath fittings, tiles, tanks and everyday home essentials.",
+      helpChoosing: "Help Choosing", helpChoosingText: "Talk to us about product options, availability and what suits your needs.",
+      visitUs: "Visit or Contact Us", visitUsText: "Visit our New Delhi showroom or contact us to check product availability.",
+      faqsTitle: "Frequently Asked Questions",
+      faqsIntro: "Have a question about products, prices or visiting us? Get in touch.",
+      faqPriceQuestion: "How can I check product prices?",
+      faqPriceAnswer: "Contact us with the product you are interested in. We can confirm current prices and availability.",
+      faqProductsQuestion: "What products can I find here?",
+      faqProductsAnswer: "Explore taps and bath fittings, tiles, water-storage tanks, home hardware and kitchen essentials. Ask us about specific brands and products.",
+      faqVisitQuestion: "Where is the showroom?",
+      faqVisitAnswer: "We are in Devli, Sangam Vihar, New Delhi. Open the address below for directions or call us before visiting.",
+      bathImageAlt: "Polished gold bathroom taps above a marble sink",
+      tileImageAlt: "Large gray wall and floor tiles in a modern bathroom",
+      tankImageAlt: "Illustration of a household water storage tank",
+      faqMore: "Have another question?", contactUs: "Contact Jaintex Bathfit",
+      contactTitle: "Visit or Contact Us",
+      contactIntro: "Visit the showroom, call us, or send a message on WhatsApp to ask about products.",
+      owner: "Owner", phone: "Phone", address: "Address", quickChat: "Message us on WhatsApp",
+      fullName: "Your name", phoneWhatsApp: "Phone / WhatsApp", productCategory: "Product category",
+      chooseCategory: "Choose a category", otherCategory: "Other / Multiple categories",
+      quantity: "Approx. quantity", optional: "(optional)", requirements: "What are you looking for?",
+      sendWhatsApp: "Continue to WhatsApp", formStatus: "Your message opens in WhatsApp so you can review and send it.",
+      namePlaceholder: "Enter your name", quantityPlaceholder: "e.g. 2 taps",
+      requirementsPlaceholder: "e.g. bathroom taps, floor tiles, or a water tank",
+      rights: "Jaintex Bathfit. All rights reserved.", call: "Call", quickContact: "Quick contact",
+      results: n => n ? `Showing ${n} ${n === 1 ? "category" : "categories"}.` : "No matching products. Try another search.",
+      interestedIn: name => `I'm interested in ${name}. Please share product options and current prices.`,
+      inquiryIntro: "Hello Jaintex Bathfit, I have a product inquiry.",
+      inquiryForm: "Product inquiry form",
+      shareDone: "Thanks for sharing Jaintex Bathfit.",
+      shareCopied: "Website link copied. Share it with your contacts.",
+      shareFallback: url => `Copy and share this link: ${url}`,
+      shareError: "Could not share automatically. Copy the website address from your browser."
+    },
+    hi: {
+      pageTitle: "जैनटेक्स बाथफिट | नल, टाइल्स और घरेलू उत्पाद",
+      pageDescription: "नई दिल्ली के जैनटेक्स बाथफिट में बाथ फिटिंग, टाइल्स, पानी की टंकियां और घरेलू हार्डवेयर देखें। उपलब्धता और कीमत के लिए कॉल या WhatsApp करें।",
+      chooseLanguage: "भाषा चुनें",
+      mainNavigation: "मुख्य नेविगेशन",
+      home: "होम", brands: "ब्रांड", products: "उत्पाद", faqs: "सामान्य प्रश्न", contact: "संपर्क",
+      whatsApp: "WhatsApp", chatWhatsApp: "जैनटेक्स बाथफिट से WhatsApp पर बात करें",
+      heroTitle: "आपके घर के लिए सुंदर नल, टाइल्स और बाथ फिटिंग",
+      heroText: "नई दिल्ली के हमारे शोरूम में अपने घर के लिए स्टाइलिश नल, सुंदर टाइल्स, बाथ फिटिंग और उपयोगी हार्डवेयर देखें।",
+      askOnWhatsApp: "WhatsApp पर पूछें", exploreProducts: "उत्पाद देखें", shareWebsite: "वेबसाइट साझा करें",
+      brandsTitle: "लोकप्रिय ब्रांड",
+      brandsText: "जैनटेक्स बाथफिट पर उपलब्ध ब्रांड देखें। मौजूदा उत्पादों और उपलब्धता के लिए संपर्क करें।",
+      brandJaquar: "बाथ फिटिंग और सैनिटरीवेयर", brandSomany: "टाइल्स और बाथवेयर",
+      brandPureplast: "पानी की टंकियां", brandOlina: "पानी की टंकियां और हार्डवेयर",
+      categoriesTitle: "आपके घर के लिए उत्पाद",
+      categoriesText: "नई दिल्ली के हमारे शोरूम में नल, बाथ फिटिंग, टाइल्स, टंकियां और रसोई के जरूरी सामान देखें।",
+      searchProducts: "उत्पाद खोजें", searchPlaceholder: "उत्पाद खोजें, जैसे नल या टाइल्स",
+      filterProducts: "उत्पाद श्रेणियां फ़िल्टर करें", allProducts: "सभी उत्पाद",
+      bathFittings: "बाथ फिटिंग", waterTanks: "पानी की टंकियां", tiles: "टाइल्स",
+      hardware: "घरेलू हार्डवेयर", kitchen: "रसोई के उत्पाद",
+      showingAll: "सभी 5 श्रेणियां दिखाई जा रही हैं।", bathDescription: "नल, शॉवर और बाथरूम के सामान",
+      tankDescription: "घर और रोज़मर्रा के उपयोग के लिए पानी की टंकियां", tileDescription: "घर के फर्श और दीवारों के लिए टाइल्स",
+      hardwareDescription: "हैंडल, कब्जे, ताले और फिटिंग", kitchenDescription: "सिंक, नल और रसोई के जरूरी सामान",
+      askAbout: "जानकारी पूछें",
+      whyUs: "जैनटेक्स बाथफिट क्यों आएं?", whyUsText: "आपके घर के लिए सही उत्पाद चुनने में मददगार सेवा।",
+      productChoice: "हर कमरे के लिए उत्पाद", productChoiceText: "नल, बाथ फिटिंग, टाइल्स, टंकियां और रोज़मर्रा के घरेलू सामान देखें।",
+      helpChoosing: "चुनने में सहायता", helpChoosingText: "उत्पादों, उपलब्धता और आपकी जरूरत के विकल्पों के बारे में पूछें।",
+      visitUs: "मिलें या संपर्क करें", visitUsText: "नई दिल्ली के हमारे शोरूम आएं या उत्पादों की उपलब्धता के लिए संपर्क करें।",
+      faqsTitle: "अक्सर पूछे जाने वाले प्रश्न",
+      faqsIntro: "उत्पाद, कीमत या शोरूम आने के बारे में पूछना है? संपर्क करें।",
+      faqPriceQuestion: "उत्पादों की कीमत कैसे पता करें?",
+      faqPriceAnswer: "जिस उत्पाद में रुचि है, उसके बारे में हमें बताएं। हम मौजूदा कीमत और उपलब्धता की जानकारी देंगे।",
+      faqProductsQuestion: "यहां कौन से उत्पाद मिलते हैं?",
+      faqProductsAnswer: "नल और बाथ फिटिंग, टाइल्स, पानी की टंकियां, घरेलू हार्डवेयर और रसोई के सामान देखें। खास ब्रांड और उत्पादों के बारे में पूछें।",
+      faqVisitQuestion: "शोरूम कहां है?",
+      faqVisitAnswer: "हम देवली, संगम विहार, नई दिल्ली में हैं। रास्ते के लिए नीचे दिए पते पर टैप करें या आने से पहले कॉल करें।",
+      bathImageAlt: "मार्बल सिंक के ऊपर चमकदार सुनहरे बाथरूम नल",
+      tileImageAlt: "आधुनिक बाथरूम में बड़ी ग्रे दीवार और फर्श की टाइल्स",
+      tankImageAlt: "घरेलू पानी की टंकी का चित्र",
+      faqMore: "कोई और सवाल है?", contactUs: "जैनटेक्स बाथफिट से संपर्क करें",
+      contactTitle: "मिलें या संपर्क करें",
+      contactIntro: "शोरूम आएं, कॉल करें या उत्पादों के बारे में पूछने के लिए WhatsApp संदेश भेजें।",
+      owner: "मालिक", phone: "फ़ोन", address: "पता", quickChat: "WhatsApp पर संदेश भेजें",
+      fullName: "आपका नाम", phoneWhatsApp: "फ़ोन / WhatsApp", productCategory: "उत्पाद श्रेणी",
+      chooseCategory: "श्रेणी चुनें", otherCategory: "अन्य / कई श्रेणियां",
+      quantity: "अनुमानित मात्रा", optional: "(वैकल्पिक)", requirements: "आपको क्या चाहिए?",
+      sendWhatsApp: "WhatsApp पर आगे बढ़ें", formStatus: "आपका संदेश WhatsApp में खुलेगा; भेजने से पहले आप उसे देख सकते हैं।",
+      namePlaceholder: "अपना नाम लिखें", quantityPlaceholder: "जैसे 2 नल",
+      requirementsPlaceholder: "जैसे बाथरूम के नल, फर्श की टाइल्स या पानी की टंकी",
+      rights: "जैनटेक्स बाथफिट। सर्वाधिकार सुरक्षित।", call: "कॉल करें", quickContact: "त्वरित संपर्क",
+      results: n => n ? `${n} श्रेणियां दिखाई जा रही हैं।` : "कोई उत्पाद नहीं मिला। कुछ और खोजें।",
+      interestedIn: name => `मुझे ${name} में रुचि है। कृपया विकल्प और मौजूदा कीमत बताएं।`,
+      inquiryIntro: "नमस्ते जैनटेक्स बाथफिट, मुझे एक उत्पाद के बारे में पूछना है।",
+      inquiryForm: "उत्पाद के बारे में पूछताछ का फ़ॉर्म",
+      shareDone: "जैनटेक्स बाथफिट साझा करने के लिए धन्यवाद।",
+      shareCopied: "वेबसाइट का लिंक कॉपी हो गया। इसे अपने संपर्कों के साथ साझा करें।",
+      shareFallback: url => `इस लिंक को कॉपी करके साझा करें: ${url}`,
+      shareError: "लिंक अपने आप साझा नहीं हो सका। ब्राउज़र से वेबसाइट का पता कॉपी करें।"
+    }
+  };
+  const languageSelect = document.getElementById('languageSelect');
+  const applyLanguage = language => {
+    const locale = translations[language] ? language : 'en';
+    const words = translations[locale];
+    document.documentElement.lang = locale === 'hi' ? 'hi' : 'en';
+    document.title = words.pageTitle;
+    document.querySelector('meta[name="description"]').content = words.pageDescription;
+    document.querySelector('meta[property="og:description"]').content = words.pageDescription;
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const value = words[element.dataset.i18n];
+      if (typeof value === 'string') element.textContent = value;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+      element.placeholder = words[element.dataset.i18nPlaceholder];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+      element.setAttribute('aria-label', words[element.dataset.i18nAria]);
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+      element.alt = words[element.dataset.i18nAlt];
+    });
+    languageSelect.value = locale;
+    document.getElementById('shareStatus').textContent = '';
+  };
+  languageSelect.addEventListener('change', () => {
+    applyLanguage(languageSelect.value);
+    filterCategories();
+    try { localStorage.setItem('jaintex-language', languageSelect.value); } catch {}
+  });
+  let initialLanguage = 'en';
+  try {
+    const savedLanguage = localStorage.getItem('jaintex-language');
+    if (savedLanguage === 'hi' || savedLanguage === 'en') initialLanguage = savedLanguage;
+  } catch {}
+  applyLanguage(initialLanguage);
+
   if ('IntersectionObserver' in window) document.documentElement.classList.add('js');
 
   // Mobile menu toggle
@@ -564,8 +743,14 @@
     link.addEventListener('click', () => {
       const requirements = document.getElementById('requirements');
       const category = document.getElementById('productCategory');
-      category.value = link.dataset.category;
-      requirements.value = `I'm interested in ${link.dataset.category}. Please share product options and a bulk quote.`;
+      const categoryName = link.dataset.category;
+      category.value = categoryName;
+      requirements.value = translations[languageSelect.value].interestedIn(categoryName === 'Water Storage Tanks'
+        ? translations[languageSelect.value].waterTanks
+        : categoryName === 'Tiles' ? translations[languageSelect.value].tiles
+        : categoryName === 'Home Hardware' ? translations[languageSelect.value].hardware
+        : categoryName === 'Kitchen Utilities' ? translations[languageSelect.value].kitchen
+        : translations[languageSelect.value].bathFittings);
     });
   });
 
@@ -581,9 +766,7 @@
       card.hidden = !(matchesCategory && matchesQuery);
       if (!card.hidden) visibleCount++;
     });
-    document.getElementById('categoryResults').textContent = visibleCount
-      ? `Showing ${visibleCount} ${visibleCount === 1 ? 'category' : 'categories'}.`
-      : 'No matching categories. Try another search.';
+    document.getElementById('categoryResults').textContent = translations[languageSelect.value].results(visibleCount);
   };
   categorySearch?.addEventListener('input', filterCategories);
   document.querySelectorAll('[data-filter]').forEach(button => {
@@ -593,23 +776,25 @@
       filterCategories();
     });
   });
+  filterCategories();
 
   const shareButton = document.getElementById('shareSite');
   const shareStatus = document.getElementById('shareStatus');
   shareButton?.addEventListener('click', async () => {
-    const shareData = { title: document.title, text: 'Explore Jaintex Bathfit products and request a bulk quote.', url: location.href };
+    const words = translations[languageSelect.value];
+    const shareData = { title: document.title, text: words.categoriesText, url: location.href };
     try {
       if (navigator.share) {
         await navigator.share(shareData);
-        shareStatus.textContent = 'Thanks for sharing Jaintex Bathfit.';
+        shareStatus.textContent = words.shareDone;
       } else if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(shareData.url);
-        shareStatus.textContent = 'Website link copied. Share it with your contacts.';
+        shareStatus.textContent = words.shareCopied;
       } else {
-        shareStatus.textContent = `Copy and share this link: ${shareData.url}`;
+        shareStatus.textContent = words.shareFallback(shareData.url);
       }
     } catch (error) {
-      if (error.name !== 'AbortError') shareStatus.textContent = 'Could not share automatically. Copy the website address from your browser.';
+      if (error.name !== 'AbortError') shareStatus.textContent = words.shareError;
     }
   });
 
@@ -618,13 +803,21 @@
   inquiryForm?.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(inquiryForm);
+    const words = translations[languageSelect.value];
+    const categoryValue = formData.get('category');
+    const categoryLabel = categoryValue === 'Water Storage Tanks' ? words.waterTanks
+      : categoryValue === 'Bath Fittings' ? words.bathFittings
+      : categoryValue === 'Tiles' ? words.tiles
+      : categoryValue === 'Home Hardware' ? words.hardware
+      : categoryValue === 'Kitchen Utilities' ? words.kitchen
+      : categoryValue;
     const message = [
-      'Hello Jaintex Bathfit, I would like to make a bulk inquiry.',
+      words.inquiryIntro,
       '',
       `Name: ${formData.get('name')}`,
       `Phone / WhatsApp: ${formData.get('phone')}`,
-      formData.get('category') ? `Product category: ${formData.get('category')}` : '',
-      formData.get('quantity') ? `Approx. quantity: ${formData.get('quantity')}` : '',
+      categoryLabel ? `${words.productCategory}: ${categoryLabel}` : '',
+      formData.get('quantity') ? `${words.quantity}: ${formData.get('quantity')}` : '',
       `Requirements: ${formData.get('requirements')}`
     ].filter(Boolean).join('\n');
     const url = `https://wa.me/919868139951?text=${encodeURIComponent(message)}`;
