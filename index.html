@@ -121,6 +121,7 @@
         <li><a href="#home" class="text-slate hover:text-navy transition" data-i18n="home">Home</a></li>
         <li><a href="#brands" class="text-slate hover:text-navy transition" data-i18n="brands">Brands</a></li>
         <li><a href="#categories" class="text-slate hover:text-navy transition" data-i18n="products">Products</a></li>
+        <li><a href="#product-help" class="text-slate hover:text-navy transition" data-i18n="help">Help</a></li>
         <li><a href="#faq" class="text-slate hover:text-navy transition" data-i18n="faqs">FAQs</a></li>
         <li><a href="#contact" class="text-slate hover:text-navy transition" data-i18n="contact">Contact</a></li>
       </ul>
@@ -150,6 +151,7 @@
       <li><a href="#home" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="home">Home</a></li>
       <li><a href="#brands" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="brands">Brands</a></li>
       <li><a href="#categories" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="products">Products</a></li>
+      <li><a href="#product-help" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="help">Help</a></li>
       <li><a href="#faq" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="faqs">FAQs</a></li>
       <li><a href="#contact" class="flex min-h-11 items-center py-2 text-slate hover:text-navy" data-i18n="contact">Contact</a></li>
       <li>
@@ -369,6 +371,69 @@
 </section>
 
 <!-- ============================================================
+     PRODUCT HELP & WARRANTY
+============================================================ -->
+<section id="product-help" class="py-20 bg-light section" aria-labelledby="help-heading">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <header class="mb-12 text-center">
+      <p class="mb-2 text-sm font-semibold uppercase tracking-[.18em] text-slate" data-i18n="helpEyebrow">Bilingual WhatsApp assistance</p>
+      <h2 id="help-heading" class="mb-3 text-3xl font-bold text-navy sm:text-4xl" data-i18n="helpTitle">Product Help &amp; Warranty Support</h2>
+      <p class="mx-auto max-w-2xl text-slate" data-i18n="helpIntro">Need help with a product? Send your bill or warranty slip and tell us what happened. You can write in English or Hindi.</p>
+    </header>
+
+    <div class="mb-8 rounded-2xl bg-white p-6 shadow-sm sm:p-8">
+      <p class="mb-3 font-semibold text-navy" data-i18n="helpWelcomeLabel">First message</p>
+      <p class="font-medium text-navy" data-i18n="helpWelcomeEnglish">Welcome to Jaintex Bathfit!</p>
+      <p class="mb-4 text-slate" lang="hi" data-i18n="helpWelcomeHindi">जैनटेक्स बाथफिट में आपका स्वागत है!</p>
+      <p class="font-medium text-navy" data-i18n="helpLanguagePromptEnglish">Please select your language:</p>
+      <p class="text-slate" lang="hi" data-i18n="helpLanguagePromptHindi">कृपया अपनी भाषा चुनें:</p>
+      <p class="mt-2 font-semibold text-navy">1️⃣ <span data-i18n="englishLanguage">English</span> &nbsp; 2️⃣ <span data-i18n="hindiLanguage">हिंदी</span></p>
+    </div>
+
+    <ol class="grid gap-4 sm:grid-cols-3">
+      <li class="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+        <span class="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">1</span>
+        <h3 class="mb-2 font-semibold text-navy" data-i18n="helpStepBillTitle">Share your bill or parchi</h3>
+        <p class="text-slate" data-i18n="helpStepBillEnglish">Please upload a photo of your bill, receipt, or warranty parchi.</p>
+        <p class="mt-2 text-slate" lang="hi" data-i18n="helpStepBillHindi">कृपया अपने बिल, रसीद या वारंटी पर्ची का एक फोटो अपलोड करें।</p>
+        <p class="mt-3 text-sm text-slate" data-i18n="helpPhotoNote">Send the clearest photo you can. If a handwritten or faded detail is unclear, we may ask you to confirm it.</p>
+      </li>
+      <li class="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+        <span class="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">2</span>
+        <h3 class="mb-2 font-semibold text-navy" data-i18n="helpStepIssueTitle">Describe the issue</h3>
+        <p class="text-slate" data-i18n="helpStepIssueEnglish">✅ Bill verified. What issue or defect are you facing with your product? Please describe it below.</p>
+        <p class="mt-2 text-slate" lang="hi" data-i18n="helpStepIssueHindi">✅ बिल सत्यापित हो गया है। आपको प्रोडक्ट में क्या समस्या या खराबी आ रही है? कृपया नीचे लिखकर बताएं।</p>
+      </li>
+      <li class="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+        <span class="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy text-sm font-bold text-white">3</span>
+        <h3 class="mb-2 font-semibold text-navy" data-i18n="helpStepOwnerTitle">Contact the owner directly</h3>
+        <p class="text-slate" data-i18n="helpStepOwnerEnglish">Your WhatsApp message goes directly to the owner with your contact number, bill details, and issue.</p>
+        <p class="mt-2 text-slate" lang="hi" data-i18n="helpStepOwnerHindi">आपका WhatsApp संदेश आपके संपर्क नंबर, बिल के विवरण और समस्या के साथ सीधे मालिक के पास जाएगा।</p>
+      </li>
+    </ol>
+
+    <div class="mt-6 rounded-2xl border border-navy/10 bg-white p-6 shadow-sm sm:p-8">
+      <h3 class="mb-3 font-semibold text-navy" data-i18n="helpOwnerNoticeTitle">Owner notification details</h3>
+      <p class="text-slate" data-i18n="helpOwnerNoticePhone">📱 Customer Contact Number: the number shown in the WhatsApp chat</p>
+      <p class="mt-2 text-slate" data-i18n="helpOwnerNoticeBill">📝 Decoded Parchi Data: the bill or warranty details confirmed in chat</p>
+      <p class="mt-2 text-slate" data-i18n="helpOwnerNoticeIssue">⚠️ Customer Issue: the problem described by the customer</p>
+      <p class="mt-5 font-medium text-navy" data-i18n="helpThanksEnglish">Thank you. Your issue and verified parchi details have been sent directly to the owner. We will contact you shortly.</p>
+      <p class="mt-2 text-slate" lang="hi" data-i18n="helpThanksHindi">धन्यवाद। आपकी समस्या और सत्यापित पर्ची का विवरण सीधे मालिक के पास भेज दिया गया है। जल्द ही आपसे संपर्क किया जाएगा।</p>
+    </div>
+
+    <div class="mt-8 text-center">
+      <a id="productHelpWhatsApp" href="https://wa.me/919868139951?text=Hello%20Jaintex%20Bathfit%2C%20I%20need%20help%20with%20a%20product.%20I%20will%20share%20a%20photo%20of%20my%20bill%20or%20warranty%20parchi."
+         target="_blank" rel="noopener noreferrer"
+         class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-navy px-7 py-3 font-semibold text-white shadow-lg transition hover:bg-slate"
+         aria-label="Get product help on WhatsApp" data-i18n-aria="helpWhatsAppAria">
+        <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i><span data-i18n="helpWhatsApp">Get product help on WhatsApp</span>
+      </a>
+      <p class="mt-3 text-sm text-slate" data-i18n="helpPhotoSendNote">Attach your bill or warranty photo in WhatsApp before sending your message.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      FREQUENTLY ASKED QUESTIONS
 ============================================================ -->
 <section id="faq" class="py-20 bg-light section" aria-labelledby="faq-heading">
@@ -547,6 +612,7 @@
         <a href="#home" class="hover:text-white transition" data-i18n="home">Home</a>
         <a href="#brands" class="hover:text-white transition" data-i18n="brands">Brands</a>
         <a href="#categories" class="hover:text-white transition" data-i18n="products">Products</a>
+        <a href="#product-help" class="hover:text-white transition" data-i18n="help">Help</a>
         <a href="#faq" class="hover:text-white transition" data-i18n="faqs">FAQs</a>
         <a href="#contact" class="hover:text-white transition" data-i18n="contact">Contact</a>
       </nav>
@@ -583,6 +649,7 @@
       chooseLanguage: "Choose language",
       mainNavigation: "Main navigation",
       home: "Home", brands: "Brands", products: "Products", faqs: "FAQs", contact: "Contact",
+      help: "Help",
       whatsApp: "WhatsApp", chatWhatsApp: "Chat with Jaintex Bathfit on WhatsApp",
       heroTitle: "Beautiful Taps, Tiles & Bath Fittings for Your Home",
       heroText: "Discover stylish taps, beautiful tiles, bath fittings, home-improvement essentials and more — with friendly service from our New Delhi showroom.",
@@ -613,6 +680,34 @@
       faqProductsAnswer: "Explore taps and bath fittings, tiles, water-storage tanks, home-improvement essentials and kitchen products. Ask us about specific brands and availability.",
       faqVisitQuestion: "Where is the showroom?",
       faqVisitAnswer: "We are in Devli, Sangam Vihar, New Delhi. Open the address below for directions or call us before visiting.",
+      helpEyebrow: "Bilingual WhatsApp assistance",
+      helpTitle: "Product Help & Warranty Support",
+      helpIntro: "Need help with a product? Send your bill or warranty slip and tell us what happened. You can write in English or Hindi.",
+      helpWelcomeLabel: "First message",
+      helpWelcomeEnglish: "Welcome to Jaintex Bathfit!",
+      helpWelcomeHindi: "जैनटेक्स बाथफिट में आपका स्वागत है!",
+      helpLanguagePromptEnglish: "Please select your language:",
+      helpLanguagePromptHindi: "कृपया अपनी भाषा चुनें:",
+      englishLanguage: "English", hindiLanguage: "हिंदी",
+      helpStepBillTitle: "Share your bill or parchi",
+      helpStepBillEnglish: "Please upload a photo of your bill, receipt, or warranty parchi.",
+      helpStepBillHindi: "कृपया अपने बिल, रसीद या वारंटी पर्ची का एक फोटो अपलोड करें।",
+      helpPhotoNote: "Send the clearest photo you can. If a handwritten or faded detail is unclear, we may ask you to confirm it.",
+      helpStepIssueTitle: "Describe the issue",
+      helpStepIssueEnglish: "✅ Bill verified. What issue or defect are you facing with your product? Please describe it below.",
+      helpStepIssueHindi: "✅ बिल सत्यापित हो गया है। आपको प्रोडक्ट में क्या समस्या या खराबी आ रही है? कृपया नीचे लिखकर बताएं।",
+      helpStepOwnerTitle: "Contact the owner directly",
+      helpStepOwnerEnglish: "Your WhatsApp message goes directly to the owner with your contact number, bill details, and issue.",
+      helpStepOwnerHindi: "आपका WhatsApp संदेश आपके संपर्क नंबर, बिल के विवरण और समस्या के साथ सीधे मालिक के पास जाएगा।",
+      helpOwnerNoticeTitle: "Owner notification details",
+      helpOwnerNoticePhone: "📱 Customer Contact Number: the number shown in the WhatsApp chat",
+      helpOwnerNoticeBill: "📝 Decoded Parchi Data: the bill or warranty details confirmed in chat",
+      helpOwnerNoticeIssue: "⚠️ Customer Issue: the problem described by the customer",
+      helpThanksEnglish: "Thank you. Your issue and verified parchi details have been sent directly to the owner. We will contact you shortly.",
+      helpThanksHindi: "धन्यवाद। आपकी समस्या और सत्यापित पर्ची का विवरण सीधे मालिक के पास भेज दिया गया है। जल्द ही आपसे संपर्क किया जाएगा।",
+      helpWhatsAppAria: "Get product help on WhatsApp",
+      helpWhatsApp: "Get product help on WhatsApp",
+      helpPhotoSendNote: "Attach your bill or warranty photo in WhatsApp before sending your message.",
       bathImageAlt: "Contemporary bathroom with a modern wall-mounted tap and basin",
       tileImageAlt: "Contemporary living room with a wood-look floor and patterned rug",
       hardwareImageAlt: "Modern home interior with built-in cabinetry and timber wall finishes",
@@ -647,6 +742,7 @@
       chooseLanguage: "भाषा चुनें",
       mainNavigation: "मुख्य नेविगेशन",
       home: "होम", brands: "ब्रांड", products: "उत्पाद", faqs: "सामान्य प्रश्न", contact: "संपर्क",
+      help: "सहायता",
       whatsApp: "WhatsApp", chatWhatsApp: "जैनटेक्स बाथफिट से WhatsApp पर बात करें",
       heroTitle: "आपके घर के लिए सुंदर नल, टाइल्स और बाथ फिटिंग",
       heroText: "नई दिल्ली के हमारे शोरूम में स्टाइलिश नल, सुंदर टाइल्स, बाथ फिटिंग, घर सुधार के जरूरी सामान और बहुत कुछ देखें।",
@@ -677,6 +773,34 @@
       faqProductsAnswer: "नल और बाथ फिटिंग, टाइल्स, पानी की टंकियां, घर सुधार और रसोई के सामान देखें। खास ब्रांड और उपलब्धता के बारे में पूछें।",
       faqVisitQuestion: "शोरूम कहां है?",
       faqVisitAnswer: "हम देवली, संगम विहार, नई दिल्ली में हैं। रास्ते के लिए नीचे दिए पते पर टैप करें या आने से पहले कॉल करें।",
+      helpEyebrow: "द्विभाषी WhatsApp सहायता",
+      helpTitle: "प्रोडक्ट सहायता और वारंटी",
+      helpIntro: "प्रोडक्ट में सहायता चाहिए? अपना बिल या वारंटी पर्ची भेजें और समस्या बताएं। आप हिंदी या अंग्रेज़ी में लिख सकते हैं।",
+      helpWelcomeLabel: "पहला संदेश",
+      helpWelcomeEnglish: "Welcome to Jaintex Bathfit!",
+      helpWelcomeHindi: "जैनटेक्स बाथफिट में आपका स्वागत है!",
+      helpLanguagePromptEnglish: "Please select your language:",
+      helpLanguagePromptHindi: "कृपया अपनी भाषा चुनें:",
+      englishLanguage: "English", hindiLanguage: "हिंदी",
+      helpStepBillTitle: "बिल या पर्ची भेजें",
+      helpStepBillEnglish: "Please upload a photo of your bill, receipt, or warranty parchi.",
+      helpStepBillHindi: "कृपया अपने बिल, रसीद या वारंटी पर्ची का एक फोटो अपलोड करें।",
+      helpPhotoNote: "जितना साफ़ फोटो हो सके भेजें। लिखावट या फीका विवरण स्पष्ट न होने पर हम आपसे पुष्टि करने के लिए कह सकते हैं।",
+      helpStepIssueTitle: "समस्या बताएं",
+      helpStepIssueEnglish: "✅ Bill verified. What issue or defect are you facing with your product? Please describe it below.",
+      helpStepIssueHindi: "✅ बिल सत्यापित हो गया है। आपको प्रोडक्ट में क्या समस्या या खराबी आ रही है? कृपया नीचे लिखकर बताएं।",
+      helpStepOwnerTitle: "सीधे मालिक से संपर्क",
+      helpStepOwnerEnglish: "Your WhatsApp message goes directly to the owner with your contact number, bill details, and issue.",
+      helpStepOwnerHindi: "आपका WhatsApp संदेश आपके संपर्क नंबर, बिल के विवरण और समस्या के साथ सीधे मालिक के पास जाएगा।",
+      helpOwnerNoticeTitle: "मालिक को मिलने वाले संदेश का विवरण",
+      helpOwnerNoticePhone: "📱 ग्राहक का संपर्क नंबर: WhatsApp चैट में दिखाई देने वाला नंबर",
+      helpOwnerNoticeBill: "📝 पर्ची का विवरण: चैट में पुष्टि किए गए बिल या वारंटी के विवरण",
+      helpOwnerNoticeIssue: "⚠️ ग्राहक की समस्या: ग्राहक द्वारा बताई गई समस्या",
+      helpThanksEnglish: "Thank you. Your issue and verified parchi details have been sent directly to the owner. We will contact you shortly.",
+      helpThanksHindi: "धन्यवाद। आपकी समस्या और सत्यापित पर्ची का विवरण सीधे मालिक के पास भेज दिया गया है। जल्द ही आपसे संपर्क किया जाएगा।",
+      helpWhatsAppAria: "WhatsApp पर प्रोडक्ट सहायता लें",
+      helpWhatsApp: "WhatsApp पर सहायता लें",
+      helpPhotoSendNote: "संदेश भेजने से पहले WhatsApp में अपने बिल या वारंटी पर्ची का फोटो जोड़ें।",
       bathImageAlt: "आधुनिक दीवार वाले नल और बेसिन सहित समकालीन बाथरूम",
       tileImageAlt: "लकड़ी जैसे फर्श और पैटर्न वाले कालीन वाला आधुनिक बैठक कक्ष",
       hardwareImageAlt: "अलमारी और लकड़ी की दीवार वाली आधुनिक घर की सजावट",
@@ -731,6 +855,11 @@
       element.title = words[element.dataset.i18nTitle];
     });
     languageSelect.value = locale;
+    const helpMessage = locale === 'hi'
+      ? 'नमस्ते जैनटेक्स बाथफिट, मुझे प्रोडक्ट की समस्या में सहायता चाहिए। मैं अपने बिल या वारंटी पर्ची का फोटो भेजूंगा।'
+      : 'Hello Jaintex Bathfit, I need help with a product issue. I will share a photo of my bill or warranty parchi.';
+    document.getElementById('productHelpWhatsApp').href =
+      `https://wa.me/919868139951?text=${encodeURIComponent(helpMessage)}`;
     document.getElementById('shareStatus').textContent = '';
   };
   languageSelect.addEventListener('change', () => {
